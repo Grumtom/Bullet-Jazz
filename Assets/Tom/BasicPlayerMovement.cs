@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasicPlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 1;
+    public GameObject aimer;
+    public float lookAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +23,6 @@ public class BasicPlayerMovement : MonoBehaviour
         playerSchmoover *= moveSpeed;
         playerSchmoover += new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
         gameObject.GetComponent<Rigidbody2D>().MovePosition(playerSchmoover);
-
-        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         
     }
 }
