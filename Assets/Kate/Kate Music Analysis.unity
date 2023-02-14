@@ -253,6 +253,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &176480189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176480190}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176480190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176480189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274552851
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accuracy: 6
-  thresholdMultipiler: 1.5
+  thresholdMultipiler: 1.25
   latestTime: 0
   latestFlux: 0
   latestSubBass: 0
@@ -614,41 +645,6 @@ MonoBehaviour:
   currWorkingSamples: []
   prevWorkingSamples: []
   freqBandSize: 0
-  spectralFluxInfos: []
-  latestData:
-    time: 0
-    spectralFlux: 0
-    threshold: 0
-    prunedSpectralFlux: 0
-    subBassSpectralFlux: 0
-    bassSpectralFlux: 0
-    lowMidSpectralFlux: 0
-    midSpectralFlux: 0
-    upperMidSpectralFlux: 0
-    presSpectralFlux: 0
-    brilSpectralFlux: 0
-    subBassThresh: 0
-    bassThresh: 0
-    lowMidThresh: 0
-    midThresh: 0
-    upperMidThresh: 0
-    presThresh: 0
-    brilThresh: 0
-    prunedSBSpectralFlux: 0
-    prunedBSpectralFlux: 0
-    prunedLMSpectralFlux: 0
-    prunedMSpectralFlux: 0
-    prunedUMSpectralFlux: 0
-    prunedPSpectralFlux: 0
-    prunedBrilSpectralFlux: 0
-    isSBassPeak: 0
-    isBassPeak: 0
-    isLMidPeak: 0
-    isMidPeak: 0
-    isUMidPeak: 0
-    isPresPeak: 0
-    isBrilPeak: 0
-    isPeak: 0
 --- !u!4 &1304385010
 Transform:
   m_ObjectHideFlags: 0
@@ -796,6 +792,7 @@ MonoBehaviour:
   Brilliance:
     m_PersistentCalls:
       m_Calls: []
+  Individualized: []
 --- !u!1 &1654417672
 GameObject:
   m_ObjectHideFlags: 0

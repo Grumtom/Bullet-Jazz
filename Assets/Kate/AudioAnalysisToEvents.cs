@@ -14,6 +14,13 @@ public class AudioAnalysisToEvents : MonoBehaviour
     public  UnityEvent UpperMidrange;
     public  UnityEvent Presence;
     public  UnityEvent Brilliance;
+    public UnityEvent[] Individualized;
+    public int size = 1024;
+
+    private void Awake()
+    {
+        Individualized = new UnityEvent[size];
+    }
 
     public void handleEvents(AnalysisRunning.SpectralFluxInfo spectralFluxInfo)
     {

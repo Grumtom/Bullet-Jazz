@@ -78,9 +78,9 @@ public class AnalysisRunning : MonoBehaviour
     [SerializeField] private float freqBandSize;
 
 
-    [SerializeField]
+    //[SerializeField]
     private List<SpectralFluxInfo> spectralFluxInfos;
-    [SerializeField]
+    //[SerializeField]
     private SpectralFluxInfo latestData;
     [Serializable]
     public class SpectralFluxInfo
@@ -123,6 +123,24 @@ public class AnalysisRunning : MonoBehaviour
         public bool isBrilPeak;
 
         public bool isPeak;
+
+        public float[] Fluxen;
+        public bool[] Beatsen;
+        public float[] Prunen;
+
+        public SpectralFluxInfo()
+        {
+            Fluxen = new float[1024];
+            Beatsen = new bool[1024];
+            Prunen = new float[1024];
+        }
+
+        public SpectralFluxInfo(int size)
+        {
+            Fluxen = new float[size];
+            Beatsen = new bool[size];
+            Prunen = new float[size];
+        }
     }
 
     // Start is called before the first frame update
@@ -142,7 +160,7 @@ public class AnalysisRunning : MonoBehaviour
     }
 
     // FixedUpdate is called once per Physics Update
-    void Update()
+    void FixedUpdate()
     {
         prevWorkingSamples = currWorkingSamples;
         currWorkingSamples = new float[sampleArrayLength];
