@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BasicPlayerMovement : MonoBehaviour
 {
+    public Animator anim;
     public float moveSpeed = 1;
     public GameObject aimer;
     public float lookAngle;
@@ -24,5 +25,10 @@ public class BasicPlayerMovement : MonoBehaviour
         playerSchmoover += new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
         gameObject.GetComponent<Rigidbody2D>().MovePosition(playerSchmoover);
         
+    }
+
+    void animate()
+    {
+      //  anim.SetFloat("");
     }
 }
