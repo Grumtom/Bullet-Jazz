@@ -77,15 +77,11 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         {
             reticule.transform.localPosition = lookInput * retDist;
         }
-        float dotA, dotB;
-        dotA = Vector3.Dot((Vector3.up + Vector3.right).normalized, reticule.transform.localPosition.normalized); //Compare ret position with up and right (the default angle of the sprite)
+        float dotA;
+        float dotB;
+        dotA = Vector3.Angle((Vector3.up + Vector3.right).normalized, reticule.transform.localPosition.normalized); //Compare ret position with up and right (the default angle of the sprite)
         dotB = Vector3.Dot((Vector3.down + Vector3.right).normalized, reticule.transform.localPosition.normalized); //Compare also with down right (90 degrees clockwise)
 
-        Debug.Log("DOTA " + dotA);
-        Debug.Log("DOTB " + dotB);
-
-        dotA--; //move the result of the first comparison so that it's a single axis (0 to -2)
-        dotA *= -90; //multiply by the trun per quarter circle step (90 degrees) (so, 0 is no rotation, -1 is 90 degrees (direction unknown), and -2 is 180 degrees (rotation irrelevant))
         if (dotB > 0)
             dotA *= -1;//based on the dotB value, determine the direction of the rotation
         reticule.transform.localRotation = Quaternion.identity;
