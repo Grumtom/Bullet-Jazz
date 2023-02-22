@@ -3827,7 +3827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5745581868784714273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5882355, z: 0}
+  m_LocalPosition: {x: 0, y: 1.071, z: 0}
   m_LocalScale: {x: 1.3333334, y: 1.1764702, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4412,7 +4412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7038633991312922895
 Transform:
   m_ObjectHideFlags: 0
@@ -4593,7 +4593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7038633992271597098
 Transform:
   m_ObjectHideFlags: 0
@@ -4774,9 +4774,9 @@ MonoBehaviour:
   moveInput: {x: 0, y: 0, z: 0}
   lookInput: {x: 0, y: 0, z: 0}
   reticule: {fileID: 7038633992271597099}
-  secondAimer: {fileID: 0}
+  secondAimer: {fileID: 5228570556690001319}
   mode: 0
-  retDist: 3
+  retDist: 1
   defaultSpeed: 0.1
   dashSpeed: 0.3
   currentSpeed: 0.1
