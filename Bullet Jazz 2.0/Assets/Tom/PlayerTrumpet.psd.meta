@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5fa0561ee6baaa84b91d3c322a94d9f8
+guid: 7afbcd6344b21ab4792e135f29c81ad3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,43 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Revolver Sprites_0
+      name: PlayerTrumpet_0
       rect:
         serializedVersion: 2
-        x: 49
+        x: 0
         y: 198
-        width: 110
-        height: 71
+        width: 169
+        height: 117
       alignment: 9
-      pivot: {x: 0.8114301, y: 0.36214328}
+      pivot: {x: 0.6658913, y: 0.25538766}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004dca1e3ababdb4fb5783fe3182ebd1
-      internalID: -1320995829
+      spriteID: f21458de67ee1b24f8c98fbe108b1280
+      internalID: 2046287623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Revolver Sprites_1
+      name: PlayerTrumpet_1
       rect:
         serializedVersion: 2
-        x: 91
-        y: 36
-        width: 25
-        height: 96
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+        x: 31
+        y: 0
+        width: 108
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbb804d8b6821d49aedb66bfb9ab94a
-      internalID: 16855966
+      spriteID: d5567aef2b8c04942ba43014fc9bebda
+      internalID: 335619414
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 101cff008028cc24788abc825b92936f
+    spriteID: 592eeb44697a35748900bc1cae16fbc8
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Revolver Sprites_1: 16855966
-      Revolver Sprites_0: -1320995829
+      PlayerTrumpet_0: 2046287623
+      PlayerTrumpet_1: 335619414
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
