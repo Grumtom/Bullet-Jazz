@@ -18,6 +18,16 @@ public class EnemyFire : MonoBehaviour
 
     public void BeatHappened()
     {
-        GameObject.Instantiate(prefabBullet, transform.position, transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 8;
+
+        if (GetComponent<EnemyMovement>().myMode == EnemyMovement.EnemyMode.Strafe && BeatSender.GiveInstance().beatCount == 0) 
+        {
+            GameObject.Instantiate(prefabBullet, transform.position, transform.rotation).GetComponent<Rigidbody>().velocity = transform.forward * 8;
+            GetComponent<EnemyMovement>().myMode = EnemyMovement.EnemyMode.Fire;
+        }
+        else
+        {
+            GetComponent<EnemyMovement>().myMode = EnemyMovement.EnemyMode.Fire;
+        }
+
     }
 }
