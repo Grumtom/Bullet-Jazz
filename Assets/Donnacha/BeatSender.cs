@@ -15,7 +15,7 @@ public class BeatSender : MonoBehaviour
     public List<BeatReciver> recivers = new();
 
     public float bPM;
-    private float secondsPerBeat;
+    public float secondsPerBeat;
     public int beatCount = 0;
 
     private void Awake()

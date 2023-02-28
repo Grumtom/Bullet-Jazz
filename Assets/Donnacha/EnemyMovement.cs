@@ -53,9 +53,11 @@ public class EnemyMovement : MonoBehaviour
 
                 Quaternion newAngle = Quaternion.LookRotation(posTarget);
 
-                newAngle = Quaternion.Euler(newAngle.x, newAngle.y + Random.Range(-90, 90), newAngle.z);
+                newAngle = Quaternion.Euler(newAngle.x, newAngle.y + Random.Range(-100, 100), newAngle.z);
 
-                posTarget = player.position + newAngle * Vector3.right * range;
+                Vector3 directional = NearestDirectional();
+
+                posTarget = player.position + newAngle * directional * range;
 
                 myController.SetDestination(posTarget);
             }
@@ -79,7 +81,33 @@ public class EnemyMovement : MonoBehaviour
 
         enemyArt.transform.position = transform.position;
 
+    }
 
+    private Vector3 NearestDirectional()
+    {
+
+        Vector3 direction = Vector3.right;
+
+        float smallestDistance = Vector3.Distance(player.position + direction * range, transform.position);
+
+        if(Vector3.Distance(player.position + Vector3.forward * range, transform.position) < smallestDistance)
+        {
+            direction = Vector3.forward;
+            smallestDistance = Vector3.Distance(player.position + Vector3.forward * range, transform.position);
+        }
+
+        if (Vector3.Distance(player.position + Vector3.left * range, transform.position) < smallestDistance)
+        {
+            direction = Vector3.left;
+            smallestDistance = Vector3.Distance(player.position + Vector3.left * range, transform.position);
+        }
+
+        if (Vector3.Distance(player.position + Vector3.back * range, transform.position) < smallestDistance)
+        {
+            direction = Vector3.back;
+        }
+
+        return direction;
 
     }
 }
