@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,26 +21,39 @@ public class Character_Sprite_Manager : MonoBehaviour
     public GameObject[] guns;
     
     [SerializeField]
-    private GameObject[] revolvers;
+    private List<GameObject> revolvers;
     [SerializeField]
-    private GameObject[] trumpets;
+    private List<GameObject> trumpets;
     [SerializeField]
-    private GameObject[] horns;
+    private List<GameObject> horns;
     [SerializeField]
-    private GameObject[] aks;
+    private List<GameObject> aks;
     [SerializeField]
-    private GameObject[] swords;
+    private List<GameObject> swords;
 
+    private void Start()
+    {
+        for (int i = 0; i < guns.Length; i++)
+        {
+            revolvers.Add(guns[i].transform.Find("Revolver").gameObject);
+            trumpets.Add(guns[i].transform.Find("Trumpet").gameObject);
+            horns.Add(guns[i].transform.Find("Horn").gameObject);
+            aks.Add(guns[i].transform.Find("Ak 47").gameObject);
+            swords.Add(guns[i].transform.Find("Sword").gameObject);
+        }
+    }
 
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             weapon += 1;
-            if (weapon == guns.Length)
+            if (weapon == guns.Length -1)
             {
-                weapon -= guns.Length;}
+                weapon -= guns.Length -1;
+                
+            }
             switchWeapons(weapon);
         }
         
@@ -73,7 +87,7 @@ public class Character_Sprite_Manager : MonoBehaviour
 
     void switchWeapons(int newGun)
     {
-        for (int i = 0; i < directions.Length; i++)
+        for (int i = 0; i < guns.Length; i++)
         {
             revolvers[i].SetActive(false);
             trumpets[i].SetActive(false);
@@ -83,7 +97,7 @@ public class Character_Sprite_Manager : MonoBehaviour
         }
 
 
-        for (int i = 0; i < directions.Length; i++)
+        for (int i = 0; i < guns.Length; i++)
         {
             switch (newGun)
             {
