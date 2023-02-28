@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: e5256aad5e68af24181e57bfc11c3587
+guid: 7f2d2da8d0208c64eadddaa9fa8463db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -51,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drum_0
+      name: up
       rect:
         serializedVersion: 2
         x: 91
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f32e73cd9bba64e6b85dc57a598a2941
-      internalID: 802342752
+      spriteID: 8f9e9e9c35ea13748b6ad79e554439b0
+      internalID: -403746850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_1
+      name: up left
       rect:
         serializedVersion: 2
         x: 755
-        y: 769
+        y: 771
         width: 168
-        height: 176
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cba2b9ac8b684c6e92bb99dde49be68
-      internalID: -1867835209
+      spriteID: ec0b3725dcf52064ea86ab991e393a86
+      internalID: 1094316412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_2
+      name: left
       rect:
         serializedVersion: 2
         x: 91
@@ -173,35 +173,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2a890799768466bbb26cb06838e1a1
-      internalID: -411732073
+      spriteID: 464499509380a024e9eef5157e76dbb3
+      internalID: -2090099956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_3
+      name: stick
       rect:
         serializedVersion: 2
         x: 475
         y: 574
         width: 64
         height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8416281, y: 0.15095572}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67671fddf89604e2fa17526da5b9d8b0
-      internalID: -874496976
+      spriteID: 4429bb76f487fdb4eb08cc21e0fecbe3
+      internalID: -676642237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_4
+      name: fire 2
       rect:
         serializedVersion: 2
         x: 429
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eed55c01d7844d6f8d9501356445d4e
-      internalID: -318292397
+      spriteID: 6b2b13dfe7cd28e49a424952b7cecb2c
+      internalID: -780939218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_5
+      name: down
       rect:
         serializedVersion: 2
         x: 91
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e6594a096fbe4561948ba8618361c63
-      internalID: -237391447
+      spriteID: d53d7fc10155f134fa41b20a3b1db612
+      internalID: 1953407809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_6
+      name: fire
       rect:
         serializedVersion: 2
         x: 429
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0859956d686564b4191901fc142365e9
-      internalID: -1605204334
+      spriteID: ad2aef5dc2f7e9b4982b90414c118acb
+      internalID: 1115898279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_7
+      name: down left
       rect:
         serializedVersion: 2
         x: 755
-        y: 84
+        y: 86
         width: 168
-        height: 176
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c70440957864d93a64e02570b58ca5
-      internalID: 1837961786
+      spriteID: 2737d0e6a48da0e4f850116ea3ed0e59
+      internalID: -1905795719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drum_8
+      name: fire 3
       rect:
         serializedVersion: 2
         x: 427
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6560d67f217c435ebe605816892d6bd
-      internalID: 2120797846
+      spriteID: 4948001a8832fad4d85ff39256b49e9a
+      internalID: 1677270072
       vertices: []
       indices: 
       edges: []
@@ -308,7 +308,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b55e27325ce2cf043b24cc3d9503c23f
     internalID: 0
     vertices: []
     indices: 
@@ -316,15 +316,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Drum_5: -237391447
-      Drum_3: -874496976
-      Drum_7: 1837961786
-      Drum_6: -1605204334
-      Drum_8: 2120797846
-      Drum_2: -411732073
-      Drum_4: -318292397
-      Drum_0: 802342752
-      Drum_1: -1867835209
+      fire 3: 1677270072
+      stick: -676642237
+      fire: 1115898279
+      down left: -1905795719
+      up: -403746850
+      up left: 1094316412
+      Drum_9: -431272275
+      left: -2090099956
+      fire 2: -780939218
+      down: 1953407809
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
