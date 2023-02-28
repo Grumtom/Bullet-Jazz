@@ -35,7 +35,9 @@ public class BeatSender : MonoBehaviour
 
     public void BeatHappen()
     {
-
+        beatCount++;
+        if (beatCount >= 4)
+            beatCount = 0;
         foreach (BeatReciver reciver in recivers)
             reciver.HearBeat();
         Invoke(nameof(BeatHappen), secondsPerBeat);

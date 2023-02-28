@@ -15,14 +15,16 @@ public class EnemyMovement : MonoBehaviour
     public EnemyMode myMode;
 
     public float range;
-    private Transform player;
+    public Transform player;
     private NavMeshAgent myController;
+    public GameObject enemyArt;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
 
-        player = FindObjectOfType<PlayerControls>().transform;
+        player = FindObjectOfType<BasicPlayerMovement>().transform;
+        myController = GetComponent<NavMeshAgent>();
 
     }
 
@@ -51,11 +53,16 @@ public class EnemyMovement : MonoBehaviour
 
                 Quaternion newAngle = Quaternion.LookRotation(posTarget);
 
-                newAngle = Quaternion.Euler(newAngle.x, newAngle.y + Random.Range(-20, 20), newAngle.z);
+                newAngle = Quaternion.Euler(newAngle.x, newAngle.y + Random.Range(-90, 90), newAngle.z);
 
-                posTarget = player.position + newAngle * Vector3.forward * range;
+                posTarget = player.position + newAngle * Vector3.right * range;
 
                 myController.SetDestination(posTarget);
+            }
+
+            if(Vector3.Distance(transform.position, player.position) > range)
+            {
+                myMode = EnemyMode.Strafe;
             }
         }
         else if(myMode == EnemyMode.Fire)
@@ -65,5 +72,14 @@ public class EnemyMovement : MonoBehaviour
             transform.LookAt(player.position);
 
         }
+    }
+
+    private void FixedUpdate()
+    {
+
+        enemyArt.transform.position = transform.position;
+
+
+
     }
 }
