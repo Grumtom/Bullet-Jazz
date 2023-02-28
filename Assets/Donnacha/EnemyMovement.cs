@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
     void Awake()
     {
 
-        player = FindObjectOfType<BasicPlayerMovement>().transform;
+        player = FindObjectOfType<PlayerControls>().transform;
         myController = GetComponent<NavMeshAgent>();
 
     }

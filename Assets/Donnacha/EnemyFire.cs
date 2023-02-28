@@ -14,7 +14,7 @@ public class EnemyFire : MonoBehaviour
     private void Awake()
     {
         enemyMove = GetComponent<EnemyMovement>();
-        target = FindObjectOfType<BasicPlayerMovement>().transform;
+        target = FindObjectOfType<PlayerControls>().transform;
     }
 
     // Update is called once per frame
