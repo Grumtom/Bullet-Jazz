@@ -9,7 +9,8 @@ public class Character_Sprite_Manager : MonoBehaviour
     public GameObject aimer;
     private int pastDir;
     private int facingDir;
-    private int weapon;
+    public int weapon;
+    public int weaponsCount = 5;
 
     [SerializeField]
         [Header("start at right, go counterclockwise")]
@@ -49,9 +50,9 @@ public class Character_Sprite_Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             weapon += 1;
-            if (weapon == guns.Length -1)
+            if (weapon == weaponsCount)
             {
-                weapon -= guns.Length -1;
+                weapon -= weaponsCount;
                 
             }
             switchWeapons(weapon);

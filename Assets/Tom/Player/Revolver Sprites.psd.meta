@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55052012600b15440a99c6df0f72e5c1
+guid: 5fa0561ee6baaa84b91d3c322a94d9f8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,43 +117,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Horn_0
+      name: Revolver Sprites_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 173
-        width: 150
-        height: 165
+        x: 49
+        y: 198
+        width: 110
+        height: 71
       alignment: 9
-      pivot: {x: 0.67426026, y: 0.3269058}
+      pivot: {x: 0.8114301, y: 0.36214328}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c4b44cce83af5148a7b4c123316f9d2
-      internalID: 527555376
+      spriteID: 004dca1e3ababdb4fb5783fe3182ebd1
+      internalID: -1320995829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Horn_1
+      name: Revolver Sprites_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 0
-        width: 108
-        height: 168
+        x: 91
+        y: 36
+        width: 25
+        height: 96
       alignment: 9
-      pivot: {x: 0.5, y: 0.78160757}
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e004c22843ec75f4395523f8406bea51
-      internalID: -1210167055
+      spriteID: 4dbb804d8b6821d49aedb66bfb9ab94a
+      internalID: 16855966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revolver Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 372
+        width: 32
+        height: 113
+      alignment: 9
+      pivot: {x: 0.5182531, y: 0.1795341}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b86a6851471c04b974d3ae686f2ef5
+      internalID: 955649489
       vertices: []
       indices: 
       edges: []
@@ -161,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 79fbd6ebc2ee73f478c8d3a497da40ee
+    spriteID: 101cff008028cc24788abc825b92936f
     internalID: 0
     vertices: []
     indices: 
@@ -169,8 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Horn_0: 527555376
-      Horn_1: -1210167055
+      Revolver Sprites_2: 955649489
+      Revolver Sprites_1: 16855966
+      Revolver Sprites_0: -1320995829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
