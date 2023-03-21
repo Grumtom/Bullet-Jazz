@@ -17,6 +17,8 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     [SerializeField]
     private float retDist = 3f;
 
+    private Rigidbody myRB;
+
     [SerializeField] private float defaultSpeed = 1f, dashSpeed = 3f, currentSpeed = 1f;
 
     private enum controlMode
@@ -41,7 +43,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         lookInput = Vector3.zero;
         moveInput = Vector3.zero;
         mode = controlMode.WaitForMode;
-
+        myRB = GetComponent<Rigidbody>();
     }
 
     private void OnEnable()
@@ -91,7 +93,9 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
 
     private void FixedUpdate()
     {
-        transform.position += moveInput * currentSpeed;
+        myRB.velocity = (moveInput * currentSpeed);
+            //(transform.position + (moveInput * currentSpeed));
+        //transform.position += moveInput * currentSpeed;
     }
     public void OnAim(InputAction.CallbackContext context)
     {
