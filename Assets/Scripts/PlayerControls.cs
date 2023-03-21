@@ -44,6 +44,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         moveInput = Vector3.zero;
         mode = controlMode.WaitForMode;
         myRB = GetComponent<Rigidbody>();
+        currentSpeed = defaultSpeed;
     }
 
     private void OnEnable()
