@@ -20,7 +20,8 @@ public class BeatSender : MonoBehaviour
 
     private void Awake()
     {
-        myInstance = GetComponent<BeatSender>();
+        if(myInstance == null)
+            myInstance = this;
     }
     // Start is called before the first frame update
     void Start()

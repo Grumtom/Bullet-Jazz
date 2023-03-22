@@ -10,12 +10,15 @@ public class EnemyMovement : MonoBehaviour
     {
         Chase,
         Strafe,
+        MeleeRange,
         Fire
     }
     public EnemyMode myMode;
 
-    public float range;
-    public Transform player;
+    public float minRange;
+    public float maxRange;
+    [SerializeField] float meleeRange;
+    private Transform player;
     private NavMeshAgent myController;
     [SerializeField] GameObject enemyArt;
     [SerializeField] bool enemyFacePlayer = false;
@@ -38,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
             myController.SetDestination(player.position);
 
-            if (myController.remainingDistance < range)
+            if (myController.remainingDistance < maxRange)
             {
                 myMode = EnemyMode.Strafe;
                 myController.SetDestination(transform.position);
@@ -59,15 +62,19 @@ public class EnemyMovement : MonoBehaviour
 
                 Vector3 directional = NearestDirectional();
 
-                posTarget = player.position + newAngle * directional * range;
+                posTarget = player.position + newAngle * directional * Random.Range(minRange, maxRange);
 
                 myController.SetDestination(posTarget);
             }
 
-            if(Vector3.Distance(transform.position, player.position) > range)
+            if(Vector3.Distance(transform.position, player.position) > maxRange)
             {
-                myMode = EnemyMode.Strafe;
+                myMode = EnemyMode.Chase;
             }
+        }
+        else if(myMode == EnemyMode.MeleeRange)
+        {
+            myController.SetDestination(player.position + (player.position - transform.position) * meleeRange);
         }
         else if(myMode == EnemyMode.Fire)
         {
@@ -75,7 +82,6 @@ public class EnemyMovement : MonoBehaviour
 
             if(enemyFacePlayer)
                 transform.LookAt(player.position);
-
         }
     }
 

@@ -31,9 +31,9 @@ public class EnemyFire : MonoBehaviour
 
             enemyMove.myMode = EnemyMovement.EnemyMode.Fire;
             readyToFire = false;
-            Invoke(nameof(ShootBullet), BeatSender.GiveInstance().secondsPerBeat);
+            gameObject.SendMessage("Attack", null, SendMessageOptions.DontRequireReceiver);
         }
-        else if(GetComponent<NavMeshAgent>().remainingDistance > enemyMove.range)
+        else if(GetComponent<NavMeshAgent>().remainingDistance > enemyMove.maxRange)
         {
             GetComponent<EnemyMovement>().myMode = EnemyMovement.EnemyMode.Chase;
         }
