@@ -418,8 +418,10 @@ MonoBehaviour:
   secondAimer: {fileID: 897833088732386193}
   mode: 0
   retDist: 3
-  defaultSpeed: 0.3
-  dashSpeed: 3
+  beatMarginPercent: 5
+  beatMargin: 0
+  defaultSpeed: 10
+  dashSpeed: 15
   currentSpeed: 1
 --- !u!54 &4923939900119022331
 Rigidbody:

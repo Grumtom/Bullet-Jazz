@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -225,6 +226,20 @@ MonoBehaviour:
   bPM: 60
   secondsPerBeat: 0
   beatCount: 0
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37b631d7778f4d7d8f7389a9984b020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+  EnemiesAttackCount: 0
 --- !u!1 &619021144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,18 +1073,6 @@ PrefabInstance:
     - target: {fileID: 8690095421755489717, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.9998484
-      objectReference: {fileID: 0}
-    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: dashSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: defaultSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: beatMarginPercent
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b4cc37a944bc7419052c2880485738, type: 3}

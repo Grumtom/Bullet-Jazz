@@ -5298,6 +5298,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2672224893239286424}
     m_Modifications:
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6568844779427257888, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -5456,6 +5464,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2672224893301375952}
     m_Modifications:
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6568844780401123300, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
       propertyPath: m_Name
       value: Guns
@@ -5523,6 +5539,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2672224893590051681}
     m_Modifications:
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568844779425545544, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6568844779427257888, guid: 69b89f3b0e7e0794e81bea298b9042e5, type: 3}
       propertyPath: m_SortingOrder
       value: 1
