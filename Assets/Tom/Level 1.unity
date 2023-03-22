@@ -13927,6 +13927,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &266256872 stripped
@@ -44574,6 +44598,30 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &965777276 stripped
@@ -54608,6 +54656,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &1212036272 stripped
@@ -68460,6 +68532,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &1563782505 stripped
@@ -69943,6 +70039,30 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &1612907865 stripped
@@ -92241,6 +92361,30 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &2132469246 stripped
