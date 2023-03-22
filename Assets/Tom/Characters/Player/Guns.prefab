@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
+  beatBullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
+  shotSpeed: 10
+  beatShotSpeed: 10
 --- !u!1 &6568844779427257894
 GameObject:
   m_ObjectHideFlags: 0
