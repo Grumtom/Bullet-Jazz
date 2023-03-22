@@ -115,6 +115,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     }
     public void OnAim(InputAction.CallbackContext context)
     {
+        if(!context.canceled && context.ReadValue<Vector2>().sqrMagnitude > 0.1f)
         lookInput = new Vector3(context.ReadValue<Vector2>().x, context.ReadValue<Vector2>().y);
         if (context.control.device.description.deviceClass == "Mouse")
         {
