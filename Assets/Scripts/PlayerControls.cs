@@ -16,9 +16,16 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private bool mouseReset = false;
     [SerializeField]
     private float retDist = 3f;
-
+    private float bPM;
+    private float beatTimer;
+    public float beatMarginPercent;
+    [SerializeField]
+    private float beatMargin;
     private Rigidbody myRB;
-
+    private bool activeFire;
+    private float timeSinceShot;
+    private float timeSinceBeat;
+    private bool beatOngoing;
     [SerializeField] private float defaultSpeed = 1f, dashSpeed = 3f, currentSpeed = 1f;
 
     private enum controlMode
@@ -45,6 +52,14 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         mode = controlMode.WaitForMode;
         myRB = GetComponent<Rigidbody>();
         currentSpeed = defaultSpeed;
+        bPM = BeatSender.GiveInstance().bPM;
+
+        //calculate expected seconds between beats
+        float bps = bPM / 60f; //BPM divided by SPM(seconds per minute) [the units mason]
+        float spb = 1 / bps; //seconds per beat
+        beatMargin = spb * beatMarginPercent/100;
+
+
     }
 
     private void OnEnable()
@@ -81,8 +96,8 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         }
         float dotA;
         float dotB;
-        dotA = Vector3.Angle((Vector3.right).normalized, reticule.transform.localPosition.normalized); //Compare ret position with up and right (the default angle of the sprite)
-        dotB = Vector3.Dot((Vector3.down).normalized, reticule.transform.localPosition.normalized); //Compare also with down right (90 degrees clockwise)
+        dotA = Vector3.Angle((Vector3.right).normalized, reticule.transform.localPosition.normalized); //Compare ret position with right (the default angle of the sprite)
+        dotB = Vector3.Dot((Vector3.down).normalized, reticule.transform.localPosition.normalized); //Compare also with down (90 degrees clockwise)
 
         if (dotB > 0)
             dotA *= -1;//based on the dotB value, determine the direction of the rotation
@@ -95,7 +110,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private void FixedUpdate()
     {
         myRB.velocity = (moveInput * currentSpeed);
-            //(transform.position + (moveInput * currentSpeed));
+        //(transform.position + (moveInput * currentSpeed));
         //transform.position += moveInput * currentSpeed;
     }
     public void OnAim(InputAction.CallbackContext context)
@@ -114,7 +129,18 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
 
     public void OnFire(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();//can't fire
+        if (context.performed)
+        {
+            if (!activeFire && !beatOngoing)
+            {
+                activeFire = true;
+                StartCoroutine(hasFired());
+            }
+            else if (!activeFire && beatOngoing)
+            {
+                Fire(true);//this is a mistake that'll need fixing with time
+            }
+        }
     }
 
     public void OnMouseResetAim(InputAction.CallbackContext context)
@@ -139,5 +165,43 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private void undash()
     {
         currentSpeed = defaultSpeed;
+    }
+
+    private IEnumerator hasFired()
+    {
+        timeSinceShot = 0;
+        while (activeFire)
+        {
+            timeSinceShot += Time.deltaTime;
+            yield return null;
+        }
+        timeSinceShot = 0;
+        yield break;
+    }
+
+    public void BeatHappened()
+    {
+        if (activeFire && timeSinceShot <= beatMargin)
+        {
+            Fire(true);
+            activeFire = false;
+        }
+        else if (activeFire && timeSinceShot > beatMargin)
+        {
+            Fire(false);
+            activeFire = false;
+        }
+        beatOngoing = true;
+        Invoke(nameof(endBeat), beatMargin);
+    }
+
+    private void endBeat()
+    {
+        beatOngoing = false;
+    }
+    private void Fire(bool beat)
+    {
+        Gun_Script activeGun = GetComponentInChildren<Gun_Script>();
+        activeGun.Shoot(beat);
     }
 }
