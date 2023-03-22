@@ -88059,6 +88059,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Kate_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
+      propertyPath: dashSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
+      propertyPath: currentSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213554486650977598, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
+      propertyPath: defaultSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
 --- !u!4 &2051064527 stripped
