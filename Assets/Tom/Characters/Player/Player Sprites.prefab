@@ -299,8 +299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
   beatBullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
-  shotSpeed: 10
-  beatShotSpeed: 10
+  shotSpeed: 15
+  beatShotSpeed: 20
 --- !u!1 &2557468679682284067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,8 +4794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
   beatBullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
-  shotSpeed: 10
-  beatShotSpeed: 10
+  shotSpeed: 15
+  beatShotSpeed: 20
 --- !u!1 &7322069825839259218
 GameObject:
   m_ObjectHideFlags: 0
