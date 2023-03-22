@@ -1,4 +1,4 @@
-using System;
+   using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,14 +84,14 @@ public class RoomScript : MonoBehaviour
                 if (bossfight && enemyIndex == plannedEnemies.Length) enemyIndex = 0;
             }
 
-          /*  if (spawnedEnemies.Count == 0)
+            if (spawnedEnemies.Count == 0)
             {
                 roomActive = false;
                 for (int i = 0; i < doors.Count; i++)
                 {
                     doors[i].SetActive(false);
                 }
-            }*/
+            }
         }
     }
 

@@ -32,10 +32,11 @@ public class EnemyManager : MonoBehaviour
     {
         if(BeatSender.GiveInstance().beatCount == 3)
         {
-            if (EnemiesAttackCount > enemies.Count)
-                EnemiesAttackCount = enemies.Count;
+            int count = EnemiesAttackCount;
+            if (count > enemies.Count)
+                count = enemies.Count;
 
-            for(int i = 0; i < EnemiesAttackCount; i++)
+            for(int i = 0; i < count; i++)
             {
 
                 int index = Random.Range(0, enemies.Count - 1);

@@ -43,6 +43,8 @@ public class BeatSender : MonoBehaviour
             reciver.HearBeat();
         Invoke(nameof(BeatHappen), secondsPerBeat);
 
+
+        Debug.Log("Beat");
     }
 
     
