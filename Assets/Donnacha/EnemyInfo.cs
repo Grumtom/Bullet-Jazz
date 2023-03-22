@@ -21,6 +21,7 @@ public class EnemyInfo : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Player Bullet"))
         {
             TakeDamage(1);
+            Destroy(other.gameObject);
         }
 
     }

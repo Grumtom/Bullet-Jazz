@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7859562855787513683}
   - component: {fileID: 1562801393733386051}
   - component: {fileID: 3215246218390502070}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7859562855950117070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drum Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,26 +286,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122277339806978935, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260696721854155653, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260696721854155653, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260696721854155653, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260696721854155653, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5260696721854155653, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5704583876561124078, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}

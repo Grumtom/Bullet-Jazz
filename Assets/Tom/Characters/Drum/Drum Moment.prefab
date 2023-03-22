@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5260696720689456717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696720701769043}
   - component: {fileID: 5260696720701769044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: down left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721072331387}
   - component: {fileID: 5260696721072331388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721081630405}
   - component: {fileID: 5260696721081630404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721106059328}
   - component: {fileID: 5260696721106059329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: up left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721158555978}
   - component: {fileID: 5260696721158555979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721482772106}
   - component: {fileID: 5260696721482772107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721558392365}
   - component: {fileID: 5260696721558392364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721854155653}
   - component: {fileID: 5260696721854155654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5260696721854155655}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -676,7 +676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAngle: 0
   aimer: {fileID: 5260696722051281719}
-  facingDir: 0
+  weapon: 0
+  weaponsCount: 5
   directions:
   - {fileID: 5260696721482772108}
   - {fileID: 5260696722264094004}
@@ -686,6 +687,12 @@ MonoBehaviour:
   - {fileID: 5260696720701769045}
   - {fileID: 5260696721870513267}
   - {fileID: 5260696722264898428}
+  guns: []
+  revolvers: []
+  trumpets: []
+  horns: []
+  aks: []
+  swords: []
 --- !u!1 &5260696721870513267
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721870513265}
   - component: {fileID: 5260696721870513266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721955875409}
   - component: {fileID: 5260696721955875408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fire 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,7 +871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696721996020601}
   - component: {fileID: 5260696721996020600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -919,7 +926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696722033803303}
   - component: {fileID: 5260696722033803302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fire 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5260696722051281718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1035,7 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696722264094002}
   - component: {fileID: 5260696722264094003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: up right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5260696722264898426}
   - component: {fileID: 5260696722264898427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: down Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1122277339806978935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drum Moment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
