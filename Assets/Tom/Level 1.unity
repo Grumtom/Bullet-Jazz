@@ -31188,7 +31188,7 @@ GameObject:
   - component: {fileID: 662698194}
   - component: {fileID: 662698196}
   m_Layer: 0
-  m_Name: Musicator
+  m_Name: Manager Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
