@@ -15,8 +15,6 @@ public class BeatReciver : MonoBehaviour
     public void HearBeat()
     {
 
-        Debug.Log("I heard");
-
         gameObject.SendMessage("BeatHappened", null, SendMessageOptions.DontRequireReceiver);
 
     }

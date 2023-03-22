@@ -17,7 +17,9 @@ public class EnemyMovement : MonoBehaviour
     public float range;
     public Transform player;
     private NavMeshAgent myController;
-    public GameObject enemyArt;
+    [SerializeField] GameObject enemyArt;
+    [SerializeField] bool enemyFacePlayer = false;
+    [SerializeField] Transform enemyTurner;
 
     // Start is called before the first frame update
     void Awake()
@@ -71,7 +73,8 @@ public class EnemyMovement : MonoBehaviour
         {
             myController.SetDestination(transform.position);
 
-            transform.LookAt(player.position);
+            if(enemyFacePlayer)
+                transform.LookAt(player.position);
 
         }
     }
@@ -80,6 +83,15 @@ public class EnemyMovement : MonoBehaviour
     {
 
         enemyArt.transform.position = transform.position;
+
+        float rotation = Vector3.Angle(transform.forward, Vector3.right);
+        float product = Vector3.Dot(transform.forward.normalized, Vector3.back.normalized);
+
+        if (product > 0)
+            rotation *= -1;
+
+        enemyTurner.localRotation = Quaternion.identity;
+        enemyTurner.Rotate(Vector3.forward, rotation);
 
     }
 

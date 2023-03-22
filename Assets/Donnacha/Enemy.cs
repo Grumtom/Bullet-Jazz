@@ -16,7 +16,7 @@ public class Enemy
     }
     public EnemyType enemyType;
 
-    public GameObject enemy;
+    public GameObject enemyBody;
 
     public int maxHp = 3;
     public int currentHp;

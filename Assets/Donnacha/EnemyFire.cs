@@ -10,7 +10,7 @@ public class EnemyFire : MonoBehaviour
     [SerializeField] private GameObject prefabBullet;
 
     private EnemyMovement enemyMove;
-
+    public bool readyToFire = false;
     private void Awake()
     {
         enemyMove = GetComponent<EnemyMovement>();
@@ -26,10 +26,11 @@ public class EnemyFire : MonoBehaviour
     public void BeatHappened()
     {
 
-        if (enemyMove.myMode == EnemyMovement.EnemyMode.Strafe && BeatSender.GiveInstance().beatCount == 0) 
+        if (enemyMove.myMode == EnemyMovement.EnemyMode.Strafe && BeatSender.GiveInstance().beatCount == 0 && readyToFire) 
         {
 
             enemyMove.myMode = EnemyMovement.EnemyMode.Fire;
+            readyToFire = false;
             Invoke(nameof(ShootBullet), BeatSender.GiveInstance().secondsPerBeat);
         }
         else if(GetComponent<NavMeshAgent>().remainingDistance > enemyMove.range)
@@ -43,7 +44,7 @@ public class EnemyFire : MonoBehaviour
 
     }
 
-    private void ShootBullet()
+    public void ShootBullet()
     {
 
         GameObject currentBullet = GameObject.Instantiate(prefabBullet, transform.position, transform.rotation);

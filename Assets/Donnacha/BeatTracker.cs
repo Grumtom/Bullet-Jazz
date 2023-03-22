@@ -48,7 +48,6 @@ public class BeatTracker : MonoBehaviour
         float speed = rectXEnd - rectXStart;
         speed /= 3;
         speed /= (60 / beatSender.bPM);
-        Debug.Log(speed);
 
         return speed;
 

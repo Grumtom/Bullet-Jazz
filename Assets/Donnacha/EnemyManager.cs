@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] List<Enemy> enemies = new();
+    public int EnemiesAttackCount;
+
+    public static EnemyManager enemyManager;
+
+    private void Awake()
     {
-        
+
+        enemyManager = GetComponent<EnemyManager>();
+        if (GetComponent<BeatReciver>() == null)
+            gameObject.AddComponent<BeatReciver>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddEnemy(Enemy enemy)
     {
-        
+        enemies.Add(enemy);
+
     }
+    public void RemoveEnemy(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+    }
+
+    public void BeatHappened()
+    {
+        if(BeatSender.GiveInstance().beatCount == 3)
+        {
+            if (EnemiesAttackCount > enemies.Count)
+                EnemiesAttackCount = enemies.Count;
+
+            for(int i = 0; i < EnemiesAttackCount; i++)
+            {
+
+                int index = Random.Range(0, enemies.Count - 1);
+
+                enemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
+
+                print("Enemy attack");
+            }
+        }
+    }
+
 }
