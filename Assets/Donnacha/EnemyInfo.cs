@@ -40,7 +40,7 @@ public class EnemyInfo : MonoBehaviour
     {
 
         EnemyManager.enemyManager.RemoveEnemy(mySelf);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
 
     }
 }

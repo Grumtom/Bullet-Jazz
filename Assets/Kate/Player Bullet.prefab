@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3046612686267458944}
   - component: {fileID: 3539282387626104903}
   - component: {fileID: 4669778266312291203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player Bullet
-  m_TagString: PlayerBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,10 +95,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3046612686267458945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3539282387626104903
 Rigidbody:
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6692049687612698697}
   - component: {fileID: 212507276872705672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

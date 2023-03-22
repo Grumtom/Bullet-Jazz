@@ -8,7 +8,7 @@ public class BeatReciver : MonoBehaviour
     private void Start()
     {
 
-        BeatSender.GiveInstance().recivers.Add(GetComponent<BeatReciver>());
+        BeatSender.GiveInstance().recivers.Add(this);
         
     }
 
@@ -19,4 +19,8 @@ public class BeatReciver : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        BeatSender.GiveInstance().recivers.Remove(this);
+    }
 }
