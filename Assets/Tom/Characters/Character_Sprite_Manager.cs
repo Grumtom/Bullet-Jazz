@@ -117,10 +117,6 @@ public class Character_Sprite_Manager : MonoBehaviour
                 case 4:
                     swords[i].SetActive(true);
                     break;
-                default:
-                    print("thats not a gun");
-                    return;
-                    break;
             }
         }
         
