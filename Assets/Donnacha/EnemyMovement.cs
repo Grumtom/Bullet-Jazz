@@ -106,21 +106,21 @@ public class EnemyMovement : MonoBehaviour
 
         Vector3 direction = Vector3.right;
 
-        float smallestDistance = Vector3.Distance(player.position + direction * range, transform.position);
+        float smallestDistance = Vector3.Distance(player.position + direction * minRange, transform.position);
 
-        if(Vector3.Distance(player.position + Vector3.forward * range, transform.position) < smallestDistance)
+        if(Vector3.Distance(player.position + Vector3.forward * minRange, transform.position) < smallestDistance)
         {
             direction = Vector3.forward;
-            smallestDistance = Vector3.Distance(player.position + Vector3.forward * range, transform.position);
+            smallestDistance = Vector3.Distance(player.position + Vector3.forward * minRange, transform.position);
         }
 
-        if (Vector3.Distance(player.position + Vector3.left * range, transform.position) < smallestDistance)
+        if (Vector3.Distance(player.position + Vector3.left * minRange, transform.position) < smallestDistance)
         {
             direction = Vector3.left;
-            smallestDistance = Vector3.Distance(player.position + Vector3.left * range, transform.position);
+            smallestDistance = Vector3.Distance(player.position + Vector3.left * minRange, transform.position);
         }
 
-        if (Vector3.Distance(player.position + Vector3.back * range, transform.position) < smallestDistance)
+        if (Vector3.Distance(player.position + Vector3.back * minRange, transform.position) < smallestDistance)
         {
             direction = Vector3.back;
         }
