@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78a6108e72af8848a759d14a496b15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plannedEnemies: []
+  plannedEnemies:
+  - {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
+  - {fileID: 7859562855950117071, guid: 2207dee083deb41c790174b185025ab6, type: 3}
   MaxEnemies: 3
   bossfight: 0
   roomActive: 0

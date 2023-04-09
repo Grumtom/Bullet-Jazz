@@ -166,8 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMode: 0
-  range: 8
-  player: {fileID: 0}
+  minRange: 0
+  maxRange: 0
+  meleeRange: 0
   enemyArt: {fileID: 8105443790331208153}
   enemyFacePlayer: 1
   enemyTurner: {fileID: 8527334081361569793}
@@ -270,11 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1122277339806978935, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1122277339806978935, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1122277339806978935, guid: a4bcaf6072ba16e4f9f3c62d40233e78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

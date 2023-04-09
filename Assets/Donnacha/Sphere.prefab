@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6692049687612698697}
   - component: {fileID: 212507276872705672}
   m_Layer: 9
-  m_Name: fire
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1115898279, guid: 7f2d2da8d0208c64eadddaa9fa8463db, type: 3}
+  m_Sprite: {fileID: 1087073931, guid: 6fba9f7defbae3a47abcd1eb4e8498af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
