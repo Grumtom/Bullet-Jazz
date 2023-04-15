@@ -52,13 +52,12 @@ public class RoomScript : MonoBehaviour
                 allDoors[i].transform.position.z - transform.position.z > -zDist && allDoors[i].transform.position.z - transform.position.z < zDist)
             {
                 doors.Add(allDoors[i]);
-                
             }
         }
 
         for (int i = 0; i < doors.Count; i++)
         {
-            doors[i].SetActive(false);
+            doors[i].GetComponent<Animator>().SetBool("Open",true);
         }
         
         
@@ -89,7 +88,7 @@ public class RoomScript : MonoBehaviour
                 roomActive = false;
                 for (int i = 0; i < doors.Count; i++)
                 {
-                    doors[i].SetActive(false);
+                    doors[i].GetComponent<Animator>().SetBool("Open",true);
                 }
             }
         }
@@ -140,7 +139,7 @@ public class RoomScript : MonoBehaviour
            // print("Activate");
             for (int i = 0; i < doors.Count; i++)
             {
-                doors[i].SetActive(true);
+                doors[i].GetComponent<Animator>().SetBool("Open",false);
             }
 
             roomActive = true;
