@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float meleeRange;
     private Transform player;
     private NavMeshAgent myController;
-    [SerializeField] GameObject enemyArt;
+    public GameObject enemyArt;
     [SerializeField] bool enemyFacePlayer = false;
     [SerializeField] Transform enemyTurner;
 
