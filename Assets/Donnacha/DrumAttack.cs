@@ -8,7 +8,14 @@ public class DrumAttack : MonoBehaviour
 
     [SerializeField] int beatPoint = 0;
     [SerializeField] GameObject hitBox;
+    [SerializeField] SpriteRenderer aoe;
+    private Color heldColor;
     private EnemyMovement myMover;
+
+    private void Start()
+    {
+        heldColor = aoe.color;
+    }
 
     public void Attack()//drumbeat
     {
@@ -24,17 +31,19 @@ public class DrumAttack : MonoBehaviour
                 beatPoint++;
                 break;
             case (2):
-
-                myMover.myMode = EnemyMovement.EnemyMode.Fire;
-                myMover.enemyArt.GetComponent<Animator>().SetTrigger("StartUp");
+                myMover.enemyArt.GetComponent<Animator>().SetBool("Attacking", true);
+                aoe.gameObject.SetActive(true);
+                aoe.color = heldColor;
 
                 beatPoint++;
                 break;
             case (3):
 
+                myMover.myMode = EnemyMovement.EnemyMode.Fire;
                 hitBox.SetActive(true);
+                aoe.color = Color.red;
 
-                Invoke(nameof(HideCollider), BeatSender.GiveInstance().secondsPerBeat);
+                Invoke(nameof(HideCollider), BeatSender.GiveInstance().secondsPerBeat / 2);
 
                 beatPoint = 0;
                 break;
@@ -47,10 +56,11 @@ public class DrumAttack : MonoBehaviour
 
     private void HideCollider()
     {
-        print("Triggered end of animation");
         hitBox.SetActive(false);
+        aoe.color = heldColor;
+        aoe.gameObject.SetActive(false);
         myMover.myMode = EnemyMovement.EnemyMode.Chase;
-        myMover.enemyArt.GetComponent<Animator>().SetTrigger("Return");
+        myMover.enemyArt.GetComponent<Animator>().SetBool("Attacking", false);
         GetComponent<EnemyFire>().readyToFire = false;
 
     }

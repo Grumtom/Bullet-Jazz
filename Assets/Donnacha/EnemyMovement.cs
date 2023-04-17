@@ -32,6 +32,10 @@ public class EnemyMovement : MonoBehaviour
         myController = GetComponent<NavMeshAgent>();
 
     }
+    private void Start()
+    {
+        enemyArt.GetComponent<Animator>().speed /= BeatSender.GiveInstance().secondsPerBeat;
+    }
 
     // Update is called once per frame
     void Update()

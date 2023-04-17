@@ -37,17 +37,18 @@ public class EnemyManager : MonoBehaviour
 
             List<Enemy> currentEnemies = new();
             foreach (Enemy enemy in enemies)
-                if (enemy.enemyType == attacks[0].attackingType)
+                if (enemy.enemyType == attacks[0].attackingType &&
+                    enemy.enemyBody.GetComponent<EnemyMovement>().myMode == EnemyMovement.EnemyMode.Strafe &&
+                    !enemy.enemyBody.GetComponent<EnemyFire>().readyToFire)
                     currentEnemies.Add(enemy);
 
+            if(currentEnemies.Count > 0)
             for(int i = 0; i < count; i++)
             {
-
                 int index = Random.Range(0, currentEnemies.Count - 1);
 
                 enemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
 
-                print("Enemy attack");
             }
         }
     }

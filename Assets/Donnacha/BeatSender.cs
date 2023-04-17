@@ -22,14 +22,14 @@ public class BeatSender : MonoBehaviour
     {
         if(myInstance == null)
             myInstance = this;
+        secondsPerBeat = 60f / bPM;
+
+        Debug.Log(secondsPerBeat);
     }
     // Start is called before the first frame update
     void Start()
     {
 
-        secondsPerBeat = 60f / bPM;
-
-        Debug.Log(secondsPerBeat);
         BeatHappen();
 
     }
@@ -44,7 +44,7 @@ public class BeatSender : MonoBehaviour
         Invoke(nameof(BeatHappen), secondsPerBeat);
 
 
-        Debug.Log("Beat");
+        //Debug.Log("Beat");
     }
 
     
