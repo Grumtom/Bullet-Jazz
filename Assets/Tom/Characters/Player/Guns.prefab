@@ -39,13 +39,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6568844779425545551}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
-  beatBullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
+  beatBullet: {fileID: 3046612686267458945, guid: 490209d35f8ca604f9298129a502aba3, type: 3}
   shotSpeed: 15
   beatShotSpeed: 20
 --- !u!1 &6568844779427257894

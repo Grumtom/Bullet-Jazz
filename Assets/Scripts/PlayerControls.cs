@@ -8,6 +8,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     [SerializeField] private Vector3 moveInput;
     [SerializeField] private Vector3 lookInput;
     [SerializeField] private GameObject reticule;
+    private Vector3 retStart;
     [SerializeField] private GameObject secondAimer;
     private Camera mainCam; //?
     [SerializeField]
@@ -26,6 +27,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private float timeSinceShot;
     private float timeSinceBeat;
     private bool beatOngoing;
+    private bool firedThisBeat;
     [SerializeField] private float defaultSpeed = 1f, dashSpeed = 3f, currentSpeed = 1f;
 
     private enum controlMode
@@ -46,7 +48,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     {
         mainCam = FindObjectOfType<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
-        reticule.transform.localPosition = Vector3.zero;
+        retStart = reticule.transform.localPosition;
         lookInput = Vector3.zero;
         moveInput = Vector3.zero;
         mode = controlMode.WaitForMode;
@@ -92,7 +94,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         }
         else
         {
-            reticule.transform.localPosition = lookInput * retDist;
+            reticule.transform.localPosition = lookInput * retDist + retStart;
         }
         float dotA;
         float dotB;
@@ -137,7 +139,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
                 activeFire = true;
                 StartCoroutine(hasFired());
             }
-            else if (!activeFire && beatOngoing)
+            else if (!activeFire && beatOngoing && !firedThisBeat)
             {
                 Fire(true);//this is a mistake that'll need fixing with time
             }
@@ -199,9 +201,11 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private void endBeat()
     {
         beatOngoing = false;
+        firedThisBeat = false;
     }
     private void Fire(bool beat)
     {
+        firedThisBeat = true;
         Gun_Script activeGun = GetComponentInChildren<Gun_Script>();
         activeGun.Shoot(beat);
     }
