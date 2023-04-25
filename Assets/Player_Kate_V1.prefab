@@ -84,6 +84,55 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2487419983929497541}
   m_Enabled: 1
+--- !u!1 &4542963830432530072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6459480239435888900}
+  - component: {fileID: 7490342734649965648}
+  m_Layer: 0
+  m_Name: Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6459480239435888900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542963830432530072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7038633992271597098}
+  m_Father: {fileID: 7038633992634524710}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7490342734649965648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542963830432530072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
+  beatBullet: {fileID: 3046612686267458945, guid: 490209d35f8ca604f9298129a502aba3, type: 3}
+  shotSpeed: 15
+  beatShotSpeed: 20
 --- !u!1 &7038633991186447785
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +166,7 @@ Transform:
   - {fileID: 7038633992327704265}
   - {fileID: 4493762553631553933}
   m_Father: {fileID: 7038633992634524710}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7038633991312922892
 GameObject:
@@ -325,13 +374,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7038633992271597099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.50000036, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1400002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7038633992286181299}
-  m_Father: {fileID: 7038633992634524710}
-  m_RootOrder: 1
+  m_Father: {fileID: 6459480239435888900}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7038633992286181297
 GameObject:
@@ -481,8 +530,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6459480239435888900}
   - {fileID: 7038633991186447784}
-  - {fileID: 7038633992271597098}
   - {fileID: 7038633992789866368}
   - {fileID: 4135017394145420116}
   m_Father: {fileID: 0}

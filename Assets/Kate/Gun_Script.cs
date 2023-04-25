@@ -19,7 +19,7 @@ public class Gun_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Shoot(bool beat)
@@ -30,14 +30,14 @@ public class Gun_Script : MonoBehaviour
             shot = Instantiate(beatBullet, transform.position, transform.rotation, transform);
             Bullet bulletDeets = shot.GetComponent<Bullet>();
             bulletDeets.speed = beatShotSpeed;
-            //shot.transform.rotation = Quaternion.LookRotation(target.transform.position - shot.transform.position);
+            shot.transform.rotation = Quaternion.LookRotation(Vector3.down, Vector3.Cross(target.transform.position - shot.transform.position, Vector3.up));
         }
         else
         {
             shot = Instantiate(bullet, transform.position, transform.rotation, transform);
             Bullet bulletDeets = shot.GetComponent<Bullet>();
             bulletDeets.speed = shotSpeed;
-            //shot.transform.rotation = Quaternion.LookRotation(target.transform.position - shot.transform.position);
+            shot.transform.rotation = Quaternion.LookRotation(Vector3.down, Vector3.Cross(target.transform.position - shot.transform.position, Vector3.up));
         }
         if (shot != null)
             shot.transform.parent = null;
