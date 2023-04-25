@@ -51,6 +51,29 @@ public class EnemyManager : MonoBehaviour
 
             }
         }
+        if(BeatSender.GiveInstance().beatCount == 0 || BeatSender.GiveInstance().beatCount == 2) //When trumpet attack happens
+        {
+
+            int count = attacks[1].attackingCount;
+
+            List<Enemy> currentEnemies = new();
+            foreach (Enemy enemy in enemies)
+                if (enemy.enemyType == attacks[1].attackingType &&
+                    enemy.enemyBody.GetComponent<EnemyMovement>().myMode == EnemyMovement.EnemyMode.Strafe &&
+                    !enemy.enemyBody.GetComponent<EnemyFire>().readyToFire)
+                    currentEnemies.Add(enemy);
+
+            if (currentEnemies.Count > 0)
+                for (int i = 0; i < count; i++)
+                {
+                    int index = Random.Range(0, currentEnemies.Count - 1);
+
+                    enemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
+
+                }
+
+        }
+
     }
 
 }

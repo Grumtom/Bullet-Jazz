@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject enemyArt;
     [SerializeField] bool enemyFacePlayer = false;
     [SerializeField] Transform enemyTurner;
+    [SerializeField] bool enemyTurnerExempt;
 
     // Start is called before the first frame update
     void Awake()
@@ -84,7 +85,7 @@ public class EnemyMovement : MonoBehaviour
         {
             myController.SetDestination(transform.position);
 
-            if(enemyFacePlayer)
+            if(enemyFacePlayer && !enemyTurnerExempt)
                 transform.LookAt(player.position);
         }
     }
@@ -94,18 +95,30 @@ public class EnemyMovement : MonoBehaviour
 
         enemyArt.transform.position = transform.position + new Vector3(0,0, 0.9f);
 
-        float rotation = Vector3.Angle(transform.forward, Vector3.right);
-        float product = Vector3.Dot(transform.forward.normalized, Vector3.back.normalized);
+        if (!enemyTurnerExempt)
+        {
+            float rotation = Vector3.Angle(transform.forward, Vector3.right);
+            float product = Vector3.Dot(transform.forward.normalized, Vector3.back.normalized);
 
-        if (product > 0)
-            rotation *= -1;
+            if (product > 0)
+                rotation *= -1;
 
-        enemyTurner.localRotation = Quaternion.identity;
-        enemyTurner.Rotate(Vector3.forward, rotation);
-
+            enemyTurner.localRotation = Quaternion.identity;
+            enemyTurner.Rotate(Vector3.forward, rotation);
+        }
+        else
+            if (Vector3.Magnitude(myController.velocity) / myController.speed < 0.1)
+            {
+                enemyArt.GetComponent<Animator>().SetBool("Moving", false);
+            }
+            else
+            {
+                enemyArt.GetComponent<Animator>().SetBool("Moving", true);
+                enemyArt.transform.rotation = myController.velocity.x > 0? Quaternion.Euler(0, 0, 180) : Quaternion.Euler(0, 0, 0);
+            }
     }
 
-    private Vector3 NearestDirectional()
+    public Vector3 NearestDirectional()
     {
 
         Vector3 direction = Vector3.right;
