@@ -92,7 +92,7 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        enemyArt.transform.position = transform.position + new Vector3(0,0, -0.9f);
+        enemyArt.transform.position = transform.position + new Vector3(0,0, 0.9f);
 
         float rotation = Vector3.Angle(transform.forward, Vector3.right);
         float product = Vector3.Dot(transform.forward.normalized, Vector3.back.normalized);

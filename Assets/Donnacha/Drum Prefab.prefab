@@ -268,7 +268,7 @@ MonoBehaviour:
   myMode: 0
   minRange: 5
   maxRange: 8
-  meleeRange: 1
+  meleeRange: 0.7
   enemyArt: {fileID: 8105443790331208153}
   enemyFacePlayer: 1
   enemyTurner: {fileID: 8527334081361569793}
