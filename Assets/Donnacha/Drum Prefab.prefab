@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6200675498803336756}
   - component: {fileID: 8061497636327101060}
   m_Layer: 8
-  m_Name: Cylinder
+  m_Name: DrumHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   enemyArt: {fileID: 8105443790331208153}
   enemyFacePlayer: 1
   enemyTurner: {fileID: 8527334081361569793}
+  enemyTurnerExempt: 0
 --- !u!114 &1562801393733386051
 MonoBehaviour:
   m_ObjectHideFlags: 0

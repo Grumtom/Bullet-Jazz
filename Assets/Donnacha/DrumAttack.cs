@@ -11,10 +11,12 @@ public class DrumAttack : MonoBehaviour
     [SerializeField] SpriteRenderer aoe;
     private Color heldColor;
     private EnemyMovement myMover;
+    private float speed;
 
     private void Start()
     {
         heldColor = aoe.color;
+        speed = GetComponent<NavMeshAgent>().speed;
     }
 
     public void Attack()//drumbeat
@@ -27,6 +29,7 @@ public class DrumAttack : MonoBehaviour
             case (0):
 
                 myMover.myMode = EnemyMovement.EnemyMode.MeleeRange;
+                GetComponent<NavMeshAgent>().speed = 7f;
 
                 beatPoint++;
                 break;
