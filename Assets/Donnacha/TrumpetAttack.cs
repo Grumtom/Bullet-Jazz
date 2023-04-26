@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class TrumpetAttack : MonoBehaviour
 {
@@ -45,7 +46,9 @@ public class TrumpetAttack : MonoBehaviour
     {
         float initialAngle = pattern.angleBetween * pattern.count * 0.5f;
 
-        for(int i = 0; i < pattern.count; i++)
+        myMover.enemyArt.transform.rotation = transform.position.x < player.position.x ? Quaternion.Euler(0, 0, 180) : Quaternion.Euler(0, 0, 0);
+
+        for (int i = 0; i < pattern.count; i++)
         {
             Vector3 direction = player.position - transform.position;
 

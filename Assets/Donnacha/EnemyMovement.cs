@@ -114,8 +114,8 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 enemyArt.GetComponent<Animator>().SetBool("Moving", true);
-                enemyArt.transform.rotation = myController.velocity.x > 0? Quaternion.Euler(0, 0, 180) : Quaternion.Euler(0, 0, 0);
-            }
+            enemyArt.transform.rotation = myController.velocity.x > 0 ? Quaternion.Euler(0, 0, 180) : Quaternion.Euler(0, 0, 0);
+        }
     }
 
     public Vector3 NearestDirectional()
