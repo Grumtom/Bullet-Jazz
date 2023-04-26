@@ -57,6 +57,16 @@ public class Character_Sprite_Manager : MonoBehaviour
             }
             switchWeapons(weapon);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            weapon -= 1;
+            if (weapon == -1)
+            {
+                weapon += weaponsCount;
+                
+            }
+            switchWeapons(weapon);
+        }
         
         
         
