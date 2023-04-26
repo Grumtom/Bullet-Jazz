@@ -29,7 +29,7 @@ public class DrumAttack : MonoBehaviour
             case (0):
 
                 myMover.myMode = EnemyMovement.EnemyMode.MeleeRange;
-                GetComponent<NavMeshAgent>().speed = 7f;
+                GetComponent<NavMeshAgent>().speed = 10f;
 
                 beatPoint++;
                 break;

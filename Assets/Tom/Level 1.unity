@@ -12436,7 +12436,9 @@ MonoBehaviour:
   enemies: []
   attacks:
   - attackingType: 0
-    attackingCount: 1
+    attackingCount: 2
+  - attackingType: 1
+    attackingCount: 2
 --- !u!1001 &669475798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12768,6 +12770,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 5153368279606946808, guid: a495e2e374b394fa2a62fee5a0d4cc59, type: 3}
+    - target: {fileID: 3226379251650422127, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
+      propertyPath: plannedEnemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 5153368279606946808, guid: a495e2e374b394fa2a62fee5a0d4cc59, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6ae9d10827b7c4cb4b922da5741151, type: 3}
 --- !u!4 &676787871 stripped
@@ -18446,7 +18460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9032526019225356466, guid: 9a00ed4443b269f439f43e86267f2f88, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9032526019225356466, guid: 9a00ed4443b269f439f43e86267f2f88, type: 3}
       propertyPath: m_AnchorMax.x
@@ -20332,6 +20346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1150492308}
   - component: {fileID: 1150492309}
+  - component: {fileID: 1150492310}
   m_Layer: 5
   m_Name: Beat timer
   m_TagString: Untagged
@@ -20357,7 +20372,7 @@ RectTransform:
   - {fileID: 743539455}
   - {fileID: 1751976830}
   m_Father: {fileID: 1609992066}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20384,6 +20399,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1150492310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150492307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c135b7aae1f32467797fb5015ad34778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1154147867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29784,8 +29811,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1563699272}
   - {fileID: 1150492308}
+  - {fileID: 1563699272}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33129,8 +33156,6 @@ GameObject:
   - component: {fileID: 1751976830}
   - component: {fileID: 1751976833}
   - component: {fileID: 1751976832}
-  - component: {fileID: 1751976831}
-  - component: {fileID: 1751976834}
   m_Layer: 5
   m_Name: Clef
   m_TagString: Untagged
@@ -33158,26 +33183,6 @@ RectTransform:
   m_AnchoredPosition: {x: -183.00002, y: -165}
   m_SizeDelta: {x: 124, y: 292}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1751976831
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751976829}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c4fd92f10c9bdc459c077c42b76b8d0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1751976832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33216,19 +33221,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751976829}
   m_CullTransparentMesh: 1
---- !u!114 &1751976834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751976829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1736e186edb494e9bca2b833a6a478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beat: 0
 --- !u!1001 &1759772232
 PrefabInstance:
   m_ObjectHideFlags: 0
