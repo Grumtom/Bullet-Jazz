@@ -8412,33 +8412,33 @@ Transform:
   - {fileID: 1803033167}
   - {fileID: 235379496}
   - {fileID: 893252512}
-  - {fileID: 339814828}
   - {fileID: 1252191829}
   - {fileID: 1024131636}
   - {fileID: 1819996017}
+  - {fileID: 1323188948}
   - {fileID: 1652796524}
   - {fileID: 2058464756}
-  - {fileID: 318710386}
   - {fileID: 1948561565}
+  - {fileID: 757329220}
   - {fileID: 729063540}
   - {fileID: 1401513083}
-  - {fileID: 238096693}
   - {fileID: 1318584436}
   - {fileID: 631194140}
-  - {fileID: 1661932130}
-  - {fileID: 1041810340}
-  - {fileID: 258989517}
-  - {fileID: 1323188948}
-  - {fileID: 1886077724}
-  - {fileID: 2091250162}
   - {fileID: 1687836012}
-  - {fileID: 1876280537}
-  - {fileID: 1039519840}
-  - {fileID: 757329220}
-  - {fileID: 438081295}
+  - {fileID: 1041810340}
   - {fileID: 1172029319}
-  - {fileID: 700727298}
+  - {fileID: 339814828}
+  - {fileID: 1039519840}
+  - {fileID: 318710386}
+  - {fileID: 1661932130}
+  - {fileID: 1886077724}
+  - {fileID: 1876280537}
+  - {fileID: 2091250162}
+  - {fileID: 238096693}
+  - {fileID: 258989517}
   - {fileID: 1798643752}
+  - {fileID: 700727298}
+  - {fileID: 438081295}
   - {fileID: 2022648328}
   - {fileID: 1673624101}
   - {fileID: 1954073120}
@@ -33130,6 +33130,7 @@ GameObject:
   - component: {fileID: 1751976833}
   - component: {fileID: 1751976832}
   - component: {fileID: 1751976831}
+  - component: {fileID: 1751976834}
   m_Layer: 5
   m_Name: Clef
   m_TagString: Untagged
@@ -33215,6 +33216,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751976829}
   m_CullTransparentMesh: 1
+--- !u!114 &1751976834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751976829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1736e186edb494e9bca2b833a6a478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beat: 0
 --- !u!1001 &1759772232
 PrefabInstance:
   m_ObjectHideFlags: 0
