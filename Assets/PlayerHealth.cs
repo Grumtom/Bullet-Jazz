@@ -30,5 +30,15 @@ public class PlayerHealth : MonoBehaviour
         {
             Destroy(destroyOnDeath);
         }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy Aoe"))
+        {
+            HP--;
+            other.gameObject.SetActive(false);
+        }
+        if (HP <= 0)
+        {
+            Destroy(destroyOnDeath);
+        }
+
     }
 }
