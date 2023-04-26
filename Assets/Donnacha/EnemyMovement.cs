@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
             if (myController.remainingDistance < maxRange)
             {
                 myMode = EnemyMode.Strafe;
-                myController.SetDestination(transform.position);
+                myController.SetDestination(transform.position + transform.forward);
             }
 
         }
