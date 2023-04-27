@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] private int HP = 3;
+    public int HP = 3;
     [SerializeField] private GameObject destroyOnDeath;
     void Start()
     {
