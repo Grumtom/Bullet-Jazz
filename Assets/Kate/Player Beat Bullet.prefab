@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3046612686267458944}
   - component: {fileID: 3539282387626104903}
   - component: {fileID: 4669778266312291203}
+  - component: {fileID: -702108122119024902}
   m_Layer: 7
   m_Name: Player Beat Bullet
   m_TagString: Untagged
@@ -126,6 +127,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66598e274b2a9e741925bbb9590ae264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: -702108122119024902}
+--- !u!114 &-702108122119024902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046612686267458945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e99c3a8935549e46b97a5440ab37932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
