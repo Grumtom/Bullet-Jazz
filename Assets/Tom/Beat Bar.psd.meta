@@ -120,10 +120,10 @@ TextureImporter:
       name: Beat Bar_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 512
-        width: 72
-        height: 278
+        x: 103
+        y: 597
+        width: 116
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
