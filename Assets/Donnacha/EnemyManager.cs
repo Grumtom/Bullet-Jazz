@@ -43,13 +43,15 @@ public class EnemyManager : MonoBehaviour
                     currentEnemies.Add(enemy);
 
             if(currentEnemies.Count > 0)
-            for(int i = 0; i < count; i++)
-            {
-                int index = Random.Range(0, currentEnemies.Count - 1);
+                for(int i = 0; i < count; i++)
+                {
+                    int index = 0;
+                    if (enemies.Count > 1)
+                        index = Random.Range(0, currentEnemies.Count);
 
-                enemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
-
-            }
+                    currentEnemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
+                    currentEnemies.Remove(currentEnemies[index]);
+                }
         }
         if(BeatSender.GiveInstance().beatCount == 0 || BeatSender.GiveInstance().beatCount == 2) //When trumpet attack happens
         {
@@ -68,8 +70,9 @@ public class EnemyManager : MonoBehaviour
                 {
                     int index = Random.Range(0, currentEnemies.Count - 1);
 
-                    enemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
+                    currentEnemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
 
+                    currentEnemies.Remove(currentEnemies[index]);
                 }
 
         }

@@ -46,16 +46,16 @@ public class EnemyMovement : MonoBehaviour
 
             myController.SetDestination(player.position);
 
-            if (myController.remainingDistance < maxRange)
+            if (myController.remainingDistance <= maxRange)
             {
                 myMode = EnemyMode.Strafe;
-                myController.SetDestination(transform.position + transform.forward);
+                myController.SetDestination(transform.position);
             }
 
         }
         else if(myMode == EnemyMode.Strafe)
         {
-            if (myController.remainingDistance < 0.5f)
+            if (myController.remainingDistance < 1.0f)
             {
                 Vector3 posTarget = transform.position - player.position;
 

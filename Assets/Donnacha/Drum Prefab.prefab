@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myMode: 0
-  minRange: 3
-  maxRange: 5
+  minRange: 2
+  maxRange: 6
   meleeRange: 0.4
   enemyArt: {fileID: 8105443790331208153}
   enemyFacePlayer: 1
