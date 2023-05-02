@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class Gun_Script : MonoBehaviour
 {
-   
+
     [SerializeField] public int weaponIndex = 0;
+    [SerializeField] public int damagePunish = 4;
     [SerializeField] private GameObject[] bullet;
     [SerializeField] private GameObject[] beatBullet;
     [SerializeField] private float[] shotSpeed;
@@ -40,7 +41,7 @@ public class Gun_Script : MonoBehaviour
         weaponIndex = man.weapon;
         if (beat)
         {
-            combos[weaponIndex] = MinMin(12, combos[weaponIndex]+1); //increase by 1 max 12
+            combos[weaponIndex] = MinMin(12, combos[weaponIndex] + 1); //increase by 1 max 12
         }
         else
         {
@@ -54,9 +55,9 @@ public class Gun_Script : MonoBehaviour
             BulletInfo bulletDeets;
             if (shot.TryGetComponent<BulletInfo>(out bulletDeets))
             {
-                bulletDeets.speed = beatShotSpeed[(int)weaponIndex] * comboEffects[weaponIndex * 4 + comboLevels[0]];
-                bulletDeets.damage = comboEffects[weaponIndex * 4 + comboLevels[1]]; //if extra on beat damage add that here
-                bulletDeets.scale = comboEffects[weaponIndex * 4 + comboLevels[2]];
+                bulletDeets.speed = beatShotSpeed[(int)weaponIndex] * comboEffects[4 + comboLevels[1]];
+                bulletDeets.damage = comboEffects[0 + comboLevels[0]];
+                bulletDeets.scale = comboEffects[8 + comboLevels[2]];
             }
             shot.transform.rotation = Quaternion.LookRotation(Vector3.down, Vector3.Cross(target.transform.position - shot.transform.position, Vector3.up));
             beatAnim.SetTrigger("Throb");
@@ -67,9 +68,9 @@ public class Gun_Script : MonoBehaviour
             BulletInfo bulletDeets;
             if (shot.TryGetComponent<BulletInfo>(out bulletDeets))
             {
-                bulletDeets.speed = beatShotSpeed[(int)weaponIndex] * comboEffects[weaponIndex * 4 + comboLevels[0]];
-                bulletDeets.damage = comboEffects[weaponIndex * 4 + comboLevels[1]];
-                bulletDeets.scale = comboEffects[weaponIndex * 4 + comboLevels[2]];
+                bulletDeets.speed = beatShotSpeed[(int)weaponIndex] * comboEffects[4 + comboLevels[1]];
+                bulletDeets.damage = comboEffects[0 + comboLevels[0]];
+                bulletDeets.scale = comboEffects[8 + comboLevels[2]];
             }
             shot.transform.rotation = Quaternion.LookRotation(Vector3.down, Vector3.Cross(target.transform.position - shot.transform.position, Vector3.up));
         }
@@ -77,7 +78,7 @@ public class Gun_Script : MonoBehaviour
 
     private void fixLevels()
     {
-        for(int i = 0; i < comboLevels.Length; i++)
+        for (int i = 0; i < comboLevels.Length; i++)
         {
             comboLevels[i] = combos[i] / 4;
         }
@@ -98,5 +99,25 @@ public class Gun_Script : MonoBehaviour
             return v2;
         }
         return v1;
+    }
+
+    public void Decay(bool fired)
+    {
+        weaponIndex = man.weapon;
+        for (int i = 0; i < combos.Length; i++)
+        {
+            if ((!fired || weaponIndex != i) && (combos[i] & 3) != 0)
+            {
+                combos[i]--;
+            }
+        }
+    }
+
+    public void hurt()
+    {
+        for(int i =0; i < combos.Length; i++)
+        {
+            combos[i] = MaxMax(combos[i]-damagePunish,0);
+        }
     }
 }

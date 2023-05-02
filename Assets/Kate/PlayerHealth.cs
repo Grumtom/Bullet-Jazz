@@ -25,15 +25,13 @@ public class PlayerHealth : MonoBehaviour
         {
             HP--;
             Destroy(other.gameObject);
-        }
-        if(HP<=0)
-        {
-            Destroy(destroyOnDeath);
+            FindObjectOfType<Gun_Script>().hurt();
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy Aoe"))
         {
             HP--;
             other.gameObject.SetActive(false);
+            FindObjectOfType<Gun_Script>().hurt();
         }
         if ((int)HP <= 0)
         {

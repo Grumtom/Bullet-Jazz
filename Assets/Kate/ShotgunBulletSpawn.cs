@@ -20,6 +20,8 @@ public class ShotgunBulletSpawn : MonoBehaviour
             GameObject newbullet = Instantiate(BulletType, transform.position, transform.rotation, transform);
             newbullet.transform.RotateAround(newbullet.transform.position, Vector3.down, cA);
             newbullet.GetComponent<BulletInfo>().speed = info.speed;
+            newbullet.GetComponent<BulletInfo>().scale = info.scale;
+            newbullet.GetComponent<BulletInfo>().damage = info.damage;
             cA += Spread / (BulletCount - 1);
         }
     }

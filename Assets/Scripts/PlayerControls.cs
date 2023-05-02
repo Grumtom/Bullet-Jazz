@@ -200,6 +200,8 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
 
     private void endBeat()
     {
+        Gun_Script activeGun = GetComponentInChildren<Gun_Script>();
+        activeGun.Decay(firedThisBeat);
         beatOngoing = false;
         firedThisBeat = false;
     }

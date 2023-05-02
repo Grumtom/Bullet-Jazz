@@ -130,6 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: -702108122119024902}
+  sprite: {fileID: 0}
+  defaultCol: {r: 1, g: 0.6745098, b: 0, a: 0}
+  doubleCol: {r: 1, g: 0.9333334, b: 0.427451, a: 0}
 --- !u!114 &-702108122119024902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e99c3a8935549e46b97a5440ab37932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  scale: 0
-  damage: 0
+  speed: 5
+  scale: 1.3333334
+  damage: 1
 --- !u!1 &8906717285879770148
 GameObject:
   m_ObjectHideFlags: 0

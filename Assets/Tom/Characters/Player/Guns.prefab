@@ -44,11 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2356776619204977042, guid: 5ccb6a5f38235d744867d4693ac23165, type: 3}
-  beatBullet: {fileID: 2356776619204977042, guid: de620ea7e5d20d544a337751a450a038, type: 3}
+  weaponIndex: 0
+  bullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  beatBullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shotSpeed: []
+  beatShotSpeed: []
   target: {fileID: 0}
-  shotSpeed: 15
-  beatShotSpeed: 20
+  beatAnim: {fileID: 0}
+  man: {fileID: 0}
+  comboEffects: []
+  combometers: []
+  combos: 
+  comboLevels: 
+  lerpAggro: 0.25
 --- !u!1 &6568844779425545551
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,11 +107,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
-  beatBullet: {fileID: 3046612686267458945, guid: 490209d35f8ca604f9298129a502aba3, type: 3}
+  weaponIndex: 0
+  bullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  beatBullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shotSpeed: []
+  beatShotSpeed: []
   target: {fileID: 0}
-  shotSpeed: 15
-  beatShotSpeed: 20
+  beatAnim: {fileID: 0}
+  man: {fileID: 0}
+  comboEffects: []
+  combometers: []
+  combos: 
+  comboLevels: 
+  lerpAggro: 0.25
 --- !u!1 &6568844779427257894
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +629,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504213ad5f1ebf418079a21a6feb620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2356776619204977042, guid: 5ccb6a5f38235d744867d4693ac23165, type: 3}
-  beatBullet: {fileID: 2356776619204977042, guid: de620ea7e5d20d544a337751a450a038, type: 3}
+  weaponIndex: 0
+  bullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  beatBullet:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  shotSpeed: []
+  beatShotSpeed: []
   target: {fileID: 0}
-  shotSpeed: 15
-  beatShotSpeed: 20
+  beatAnim: {fileID: 0}
+  man: {fileID: 0}
+  comboEffects: []
+  combometers: []
+  combos: 
+  comboLevels: 
+  lerpAggro: 0.25

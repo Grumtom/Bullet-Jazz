@@ -130,21 +130,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponIndex: 0
+  damagePunish: 4
   bullet:
   - {fileID: 3046612686267458945, guid: 801f4abf7815d054faa5227aa673c149, type: 3}
-  - {fileID: 0}
+  - {fileID: 413401560252697992, guid: f5a55bd3113c2e74dbf0b348030d3a9b, type: 3}
   - {fileID: 2356776619204977042, guid: 5ccb6a5f38235d744867d4693ac23165, type: 3}
   beatBullet:
   - {fileID: 3046612686267458945, guid: 490209d35f8ca604f9298129a502aba3, type: 3}
-  - {fileID: 0}
+  - {fileID: 413401560252697992, guid: bc7b0630a84b5f94d97e01d02b7d1c22, type: 3}
   - {fileID: 2356776619204977042, guid: de620ea7e5d20d544a337751a450a038, type: 3}
   shotSpeed:
   - 15
-  - 0
+  - 15
   - 15
   beatShotSpeed:
   - 20
-  - 0
+  - 20
   - 20
   target: {fileID: 7038633992271597099}
   beatAnim: {fileID: 0}

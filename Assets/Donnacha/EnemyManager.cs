@@ -78,7 +78,11 @@ public class EnemyManager : MonoBehaviour
         }
         else
         {
-
+            if (attacks.Count < 3)
+            {
+                Debug.Log("Avoid Error on \"BeatSender.GiveInstance().beatCount>=3\"");
+                return;
+            }
             int count = attacks[2].attackingCount;
 
             List<Enemy> currentEnemies = new();
