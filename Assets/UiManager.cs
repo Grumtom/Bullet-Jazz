@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     public int weaponIndex;
-    public int health;
-    public int pHealth;
+    public float health;
+    public float pHealth;
     public Animator dmgUIAnim;
     public Character_Sprite_Manager playerSprites;
     public PlayerHealth PlayerHealth;
@@ -29,7 +29,7 @@ public class UiManager : MonoBehaviour
         }
 
         pHealth = health;
-        if (health < 1.1)
+        if (health < 1.1f)
         {
             lowHP.SetActive(true);
         }

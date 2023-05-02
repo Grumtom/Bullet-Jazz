@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
     {
         myRB = GetComponent<Rigidbody>();
         info = GetComponent<BulletInfo>();
+        transform.parent = null;
+        transform.localScale *= info.scale;
     }
 
     // Update is called once per frame
