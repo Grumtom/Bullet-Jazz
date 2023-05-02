@@ -6857,7 +6857,7 @@ GameObject:
   - component: {fileID: 338737615}
   - component: {fileID: 338737614}
   m_Layer: 5
-  m_Name: Bar (2)
+  m_Name: THE MIDDLE ONE?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7746,7 +7746,7 @@ GameObject:
   - component: {fileID: 381756619}
   - component: {fileID: 381756618}
   m_Layer: 5
-  m_Name: Bar
+  m_Name: Horn Combo Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12133,57 +12133,21 @@ PrefabInstance:
       value: Player_Kate_V1
       objectReference: {fileID: 0}
     - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.size
-      value: 12
-      objectReference: {fileID: 0}
+      propertyPath: beatAnim
+      value: 
+      objectReference: {fileID: 722863659}
     - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: combometers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2014483739}
     - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[1]
-      value: 1.3333334
-      objectReference: {fileID: 0}
+      propertyPath: combometers.Array.data[1]
+      value: 
+      objectReference: {fileID: 338737614}
     - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[2]
-      value: 1.6666666
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[3]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[4]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[5]
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[6]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[7]
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[8]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[9]
-      value: 1.1666666
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[10]
-      value: 1.3333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7490342734649965648, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
-      propertyPath: comboEffects.Array.data[11]
-      value: 1.5
-      objectReference: {fileID: 0}
+      propertyPath: combometers.Array.data[2]
+      value: 
+      objectReference: {fileID: 381756618}
     - target: {fileID: 8690095419847804660, guid: d0b4cc37a944bc7419052c2880485738, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.81040424
@@ -43519,7 +43483,7 @@ GameObject:
   - component: {fileID: 2014483740}
   - component: {fileID: 2014483739}
   m_Layer: 5
-  m_Name: Bar (1)
+  m_Name: GUN BAR WHY IS THIS THE ORDER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
