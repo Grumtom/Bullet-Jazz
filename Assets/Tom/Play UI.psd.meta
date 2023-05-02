@@ -125,7 +125,7 @@ TextureImporter:
         width: 1920
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 300
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
         width: 495
         height: 229
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,6 +175,69 @@ TextureImporter:
       bones: []
       spriteID: c1dd1dbc2deac8e4ea24b88f679f0770
       internalID: -866101474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play UI_3
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 255
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b429578b995cdfc468bbb44522ff99bd
+      internalID: -1539663270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play UI_4
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 4
+        width: 255
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0301c180494e33340a1cd63157ee8295
+      internalID: 235729105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play UI_5
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 101
+        width: 59
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58940c2ca97b5294daf9824973e04ca4
+      internalID: 2014518205
       vertices: []
       indices: 
       edges: []
@@ -191,6 +254,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Play UI_2: -866101474
+      Play UI_5: 2014518205
+      Play UI_3: -1539663270
+      Play UI_4: 235729105
       Play UI_0: -980737731
       Play UI_1: 1428927203
   spritePackingTag: 
