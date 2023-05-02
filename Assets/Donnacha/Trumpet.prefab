@@ -255,8 +255,18 @@ MonoBehaviour:
   beatPoint: 0
   bullet: {fileID: 3046612686267458945, guid: 6d3f9250cee754ee88190a29a2f8c76d, type: 3}
   bulletPattern:
-  - count: 3
-    angleBetween: 20
+  - count: 1
+    angleBetween: 0
+    fireSpeed: 7
+  - count: 1
+    angleBetween: 0
+    fireSpeed: 9
+  - count: 1
+    angleBetween: 0
+    fireSpeed: 11
+  - count: 1
+    angleBetween: 0
+    fireSpeed: 13
   fireSpeed: 4
 --- !u!1001 &3068842381798656763
 PrefabInstance:

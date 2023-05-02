@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyInfo : MonoBehaviour
 {
 
-    [SerializeField] Enemy mySelf;
+    public Enemy mySelf;
 
     private void Start()
     {

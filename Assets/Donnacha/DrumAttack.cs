@@ -76,7 +76,7 @@ public class DrumAttack : MonoBehaviour
         if (!GetComponent<EnemyFire>().readyToFire)
         {
 
-            //mode = FindObjectOfType<PlayerHealth>().
+            mode = Mathf.RoundToInt( FindObjectOfType<Gun_Script>().comboLevels[0]);
             GetComponent<NavMeshAgent>().speed = speeds[mode];
 
         }

@@ -12,7 +12,7 @@ public class TrumpetAttack : MonoBehaviour
     [SerializeField] List<BulletPattern> bulletPattern = new();
     [SerializeField] float fireSpeed = 8;
     private EnemyMovement myMover;
-    private int mode = 0;
+    [SerializeField] int mode = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +29,11 @@ public class TrumpetAttack : MonoBehaviour
             beatPoint++;
             myMover.myMode = EnemyMovement.EnemyMode.Fire;
             myMover.enemyArt.GetComponent<Animator>().SetTrigger("Fire");
+
+            mode = GetComponent<EnemyInfo>().mySelf.enemyType == Enemy.EnemyType.Trumpet? Mathf.RoundToInt(FindObjectOfType<Gun_Script>().comboLevels[1])
+                : Mathf.RoundToInt(FindObjectOfType<Gun_Script>().comboLevels[2]);
         }
-        else if (beatPoint < bulletPattern.Count + 1)
+        else if (beatPoint == 1)
         {
             Fire(bulletPattern[mode]);
             beatPoint++;
@@ -75,16 +78,5 @@ public class TrumpetAttack : MonoBehaviour
         public float fireSpeed;
     }
 
-    private void Update()
-    {
-
-        if (!GetComponent<EnemyFire>().readyToFire)
-        {
-
-            //mode = Mathf.RoundToInt(FindObjectOfType<PlayerHealth>().);
-
-        }
-
-    }
 
 }
