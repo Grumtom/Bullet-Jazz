@@ -288,8 +288,8 @@ MonoBehaviour:
   mySelf:
     enemyType: 0
     enemyBody: {fileID: 7859562855787513691}
-    maxHp: 3
-    currentHp: 3
+    maxHp: 6
+    currentHp: 6
 --- !u!54 &3215246218390502070
 Rigidbody:
   m_ObjectHideFlags: 0

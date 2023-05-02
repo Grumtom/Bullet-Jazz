@@ -11,8 +11,7 @@ public class Enemy
     {
         Drum,
         Trumpet,
-        Piano,
-        String
+        Horn
     }
     public EnemyType enemyType;
 

@@ -76,6 +76,29 @@ public class EnemyManager : MonoBehaviour
                 }
 
         }
+        else
+        {
+
+            int count = attacks[2].attackingCount;
+
+            List<Enemy> currentEnemies = new();
+            foreach (Enemy enemy in enemies)
+                if (enemy.enemyType == attacks[2].attackingType &&
+                    enemy.enemyBody.GetComponent<EnemyMovement>().myMode == EnemyMovement.EnemyMode.Strafe &&
+                    !enemy.enemyBody.GetComponent<EnemyFire>().readyToFire)
+                    currentEnemies.Add(enemy);
+
+            if (currentEnemies.Count > 0)
+                for (int i = 0; i < count; i++)
+                {
+                    int index = Random.Range(0, currentEnemies.Count - 1);
+
+                    currentEnemies[index].enemyBody.GetComponent<EnemyFire>().readyToFire = true;
+
+                    currentEnemies.Remove(currentEnemies[index]);
+                }
+
+        }
 
     }
 

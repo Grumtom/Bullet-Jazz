@@ -66,7 +66,7 @@ public class TrumpetAttack : MonoBehaviour
 
             GameObject newBullet = GameObject.Instantiate(bullet, posTarget + transform.position, angleToPlayer);
 
-            newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.forward * fireSpeed;
+            newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.forward * pattern.fireSpeed;
         }
     }
 
