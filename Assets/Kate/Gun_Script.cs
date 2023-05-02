@@ -13,15 +13,14 @@ public class Gun_Script : MonoBehaviour
     [SerializeField] private float[] shotSpeed;
     [SerializeField] private float[] beatShotSpeed;
     [SerializeField] private GameObject target;
-    public Character_Sprite_Manager man;
+    [SerializeField] private Animator beatAnim;
+    [SerializeField] private Character_Sprite_Manager man;
     [Header("0-3 is first wepon (damage buff), 4-7 is second (speed) and so on")]
-    public float[] comboEffects;
-    public Image[] combometers;
-    public int[] combos;//full level0-12
+    [SerializeField] private float[] comboEffects;
+    [SerializeField] private Image[] combometers;
+    [SerializeField] private int[] combos;//full level0-12
     public int[] comboLevels;//0-3
-    public float lerpAggro = 0.25f;
-
-    public 
+    [SerializeField] private float lerpAggro = 0.25f;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,7 +59,7 @@ public class Gun_Script : MonoBehaviour
                 bulletDeets.scale = comboEffects[weaponIndex * 4 + comboLevels[2]];
             }
             shot.transform.rotation = Quaternion.LookRotation(Vector3.down, Vector3.Cross(target.transform.position - shot.transform.position, Vector3.up));
-
+            beatAnim.SetTrigger("Throb");
         }
         else
         {
