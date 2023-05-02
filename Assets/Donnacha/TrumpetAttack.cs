@@ -12,6 +12,7 @@ public class TrumpetAttack : MonoBehaviour
     [SerializeField] List<BulletPattern> bulletPattern = new();
     [SerializeField] float fireSpeed = 8;
     private EnemyMovement myMover;
+    private int mode = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class TrumpetAttack : MonoBehaviour
         }
         else if (beatPoint < bulletPattern.Count + 1)
         {
-            Fire(bulletPattern[beatPoint - 1]);
+            Fire(bulletPattern[mode]);
             beatPoint++;
         }
         else
@@ -71,6 +72,19 @@ public class TrumpetAttack : MonoBehaviour
     {
         public int count;
         public int angleBetween;
+        public float fireSpeed;
+    }
+
+    private void Update()
+    {
+
+        if (!GetComponent<EnemyFire>().readyToFire)
+        {
+
+            //mode = Mathf.RoundToInt(FindObjectOfType<PlayerHealth>().);
+
+        }
+
     }
 
 }

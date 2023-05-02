@@ -11,12 +11,13 @@ public class DrumAttack : MonoBehaviour
     [SerializeField] SpriteRenderer aoe;
     private Color heldColor;
     private EnemyMovement myMover;
-    private float speed;
+
+    private int mode = 0;
+    public List<float> speeds;
 
     private void Start()
     {
         heldColor = aoe.color;
-        speed = GetComponent<NavMeshAgent>().speed;
     }
 
     public void Attack()//drumbeat
@@ -29,7 +30,7 @@ public class DrumAttack : MonoBehaviour
             case (0):
 
                 myMover.myMode = EnemyMovement.EnemyMode.MeleeRange;
-                GetComponent<NavMeshAgent>().speed = 10f;
+                GetComponent<NavMeshAgent>().speed *= 1.5f;
 
                 beatPoint++;
                 break;
@@ -65,6 +66,20 @@ public class DrumAttack : MonoBehaviour
         myMover.myMode = EnemyMovement.EnemyMode.Chase;
         myMover.enemyArt.GetComponent<Animator>().SetBool("Attacking", false);
         GetComponent<EnemyFire>().readyToFire = false;
+        GetComponent<NavMeshAgent>().speed = speeds[mode];
+
+    }
+
+    private void Update()
+    {
+
+        if (!GetComponent<EnemyFire>().readyToFire)
+        {
+
+            //mode = FindObjectOfType<PlayerHealth>().
+            GetComponent<NavMeshAgent>().speed = speeds[mode];
+
+        }
 
     }
 
