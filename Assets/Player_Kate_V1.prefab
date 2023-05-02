@@ -148,6 +148,25 @@ MonoBehaviour:
   - 20
   target: {fileID: 7038633992271597099}
   man: {fileID: 0}
+  comboEffects:
+  - 1
+  - 1.3333334
+  - 1.6666666
+  - 2
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 1
+  - 1.1666666
+  - 1.3333334
+  - 1.5
+  combometers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  combos: 000000000000000000000000
+  comboLevels: 000000000000000000000000
 --- !u!1 &7038633991186447785
 GameObject:
   m_ObjectHideFlags: 0
