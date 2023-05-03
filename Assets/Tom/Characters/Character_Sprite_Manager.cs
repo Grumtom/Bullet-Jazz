@@ -47,7 +47,7 @@ public class Character_Sprite_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             weapon += 1;
             if (weapon == weaponsCount)
@@ -57,7 +57,7 @@ public class Character_Sprite_Manager : MonoBehaviour
             }
             switchWeapons(weapon);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             weapon -= 1;
             if (weapon == -1)
