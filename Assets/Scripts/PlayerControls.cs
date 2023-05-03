@@ -29,6 +29,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     private bool beatOngoing;
     private bool firedThisBeat;
     [SerializeField] private float defaultSpeed = 1f, dashSpeed = 3f, currentSpeed = 1f;
+    private Character_Sprite_Manager man;
 
     private enum controlMode
     {
@@ -46,6 +47,7 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
     // Start is called before the first frame update
     void Start()
     {
+        man = FindObjectOfType<Character_Sprite_Manager>();
         mainCam = FindObjectOfType<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
         retStart = reticule.transform.localPosition;
@@ -210,5 +212,17 @@ public class PlayerControls : MonoBehaviour, IPlayerActions
         firedThisBeat = true;
         Gun_Script activeGun = GetComponentInChildren<Gun_Script>();
         activeGun.Shoot(beat);
+    }
+
+    public void OnChangeWeapon(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() < -0.01f)
+        {
+            man.gunSwap(1);
+        }
+        if (context.ReadValue<float>() > 0.01f)
+        {
+            man.gunSwap(-1);
+        }
     }
 }
