@@ -31,6 +31,7 @@ public class BeatSender : MonoBehaviour
     {
 
         BeatHappen();
+        FindObjectOfType<AudioListener>().GetComponent<AudioSource>().Play();
 
     }
 
