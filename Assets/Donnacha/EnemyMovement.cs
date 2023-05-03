@@ -79,7 +79,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else if(myMode == EnemyMode.MeleeRange)
         {
-            myController.SetDestination(player.position + (player.position - transform.position) * meleeRange);
+            myController.SetDestination(player.position + ( transform.position - player.position) * meleeRange);
         }
         else if(myMode == EnemyMode.Fire)
         {
