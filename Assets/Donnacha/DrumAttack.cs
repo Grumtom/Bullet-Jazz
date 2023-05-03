@@ -12,7 +12,7 @@ public class DrumAttack : MonoBehaviour
     private Color heldColor;
     private EnemyMovement myMover;
 
-    private int mode = 0;
+    [SerializeField] private int mode = 0;
     public List<float> speeds;
 
     private void Start()
