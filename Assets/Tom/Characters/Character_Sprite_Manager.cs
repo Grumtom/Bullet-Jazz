@@ -47,7 +47,8 @@ public class Character_Sprite_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*
+        if (Input.GetKeyDown(KeyCode.E))
         {
             weapon += 1;
             if (weapon == weaponsCount)
@@ -57,7 +58,7 @@ public class Character_Sprite_Manager : MonoBehaviour
             }
             switchWeapons(weapon);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             weapon -= 1;
             if (weapon == -1)
@@ -67,7 +68,7 @@ public class Character_Sprite_Manager : MonoBehaviour
             }
             switchWeapons(weapon);
         }
-        
+        */
         
         
         lookAngle = aimer.transform.localEulerAngles.z ;
@@ -94,6 +95,31 @@ public class Character_Sprite_Manager : MonoBehaviour
                 directions[i].SetActive(false);
             }
         }
+    }
+
+    public void gunSwap(int direction)
+    {
+        if(direction < 0)
+        {
+            weapon -= 1;
+            if (weapon == -1)
+            {
+                weapon += weaponsCount;
+
+            }
+            switchWeapons(weapon);
+        }
+        else
+        {
+            weapon += 1;
+            if (weapon == weaponsCount)
+            {
+                weapon -= weaponsCount;
+
+            }
+            switchWeapons(weapon);
+        }
+
     }
 
     void switchWeapons(int newGun)

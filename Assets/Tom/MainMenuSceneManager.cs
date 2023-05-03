@@ -7,6 +7,6 @@ public class MainMenuSceneManager : MonoBehaviour
 {
     public void loadScene(int index)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(index);
     }
 }

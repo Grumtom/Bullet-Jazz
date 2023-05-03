@@ -233,7 +233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9032526019100203344, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9032526019225356466, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_Pivot.x
