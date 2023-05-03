@@ -33,6 +33,9 @@ public class EnemyManager : MonoBehaviour
     {
         if(BeatSender.GiveInstance().beatCount == 1)//When Drum attack happens
         {
+            if (attacks.Count < 1)
+                return;
+
             int count = attacks[0].attackingCount;
 
             List<Enemy> currentEnemies = new();
@@ -55,6 +58,8 @@ public class EnemyManager : MonoBehaviour
         }
         if(BeatSender.GiveInstance().beatCount == 0 || BeatSender.GiveInstance().beatCount == 2) //When trumpet attack happens
         {
+            if (attacks.Count < 2)
+                return;
 
             int count = attacks[1].attackingCount;
 
