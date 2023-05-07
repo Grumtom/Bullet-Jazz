@@ -131,8 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 2987715205175271066}
   sprite: {fileID: 0}
-  defaultCol: {r: 1, g: 0.6745098, b: 0, a: 0}
-  doubleCol: {r: 1, g: 0.9333334, b: 0.427451, a: 0}
+  defaultCol: {r: 0.617, g: 0.019102536, b: 0, a: 0}
+  doubleCol: {r: 1, g: 0.8835617, b: 0, a: 0}
 --- !u!114 &2987715205175271066
 MonoBehaviour:
   m_ObjectHideFlags: 0
