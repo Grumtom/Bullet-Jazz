@@ -222,8 +222,8 @@ MonoBehaviour:
   mySelf:
     enemyType: 1
     enemyBody: {fileID: 5153368279987766380}
-    maxHp: 3
-    currentHp: 3
+    maxHp: 9
+    currentHp: 9
 --- !u!54 &434718884116527489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,6 +268,7 @@ MonoBehaviour:
     angleBetween: 0
     fireSpeed: 13
   fireSpeed: 4
+  mode: 0
 --- !u!1001 &3068842381798656763
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class EnemyInfo : MonoBehaviour
 
         if(other.gameObject.layer == LayerMask.NameToLayer("Player Bullet"))
         {
-            TakeDamage(1);
+            TakeDamage(FindObjectOfType<Gun_Script>().comboLevels[0] + 3);
             Destroy(other.gameObject);
         }
 
@@ -31,15 +31,17 @@ public class EnemyInfo : MonoBehaviour
 
         mySelf.currentHp -= damage;
 
+        GetComponent<EnemyMovement>().enemyArt.GetComponent<Animator>().SetTrigger("Take Damage");
+
         if (mySelf.currentHp <= 0)
             Die();
-
     }
 
     private void Die()
     {
 
         EnemyManager.enemyManager.RemoveEnemy(mySelf);
+        BeatSender.GiveInstance().recivers.Remove(GetComponent<BeatReciver>());
         Destroy(transform.parent.gameObject);
 
     }
