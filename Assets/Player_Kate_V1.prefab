@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 6
-  destroyOnDeath: {fileID: 7038633991186447785}
+  destroyOnDeath: {fileID: 7038633992634524711}
 --- !u!1 &7038633992789866369
 GameObject:
   m_ObjectHideFlags: 0
