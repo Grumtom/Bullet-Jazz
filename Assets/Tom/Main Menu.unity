@@ -231,6 +231,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 509688683}
     m_Modifications:
+    - target: {fileID: 6362988736085163617, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506207846609357808, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_text
+      value: "Move - WASD\nFire - Mouse1\nNext Weapon - E\nPrevious Weapon - Q\n\nFiring
+        on beat will increase the sound level of the weapon you are holding. The
+        sound level will increase the power of all of your weapons but beware! as
+        the enemies strength will also increase.\n\nWeapon:\tSound Buff\n\nRevolver\tDamage\nTrumpet\tSpeed\nHorn\t\tBullet
+        Size"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526017850822398, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1236226190}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuSceneManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032526018644532703, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9032526019100203344, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
@@ -330,6 +374,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9032526019225356466, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
   m_PrefabInstance: {fileID: 1236226188}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1236226190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9077076367921175875, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
+  m_PrefabInstance: {fileID: 1236226188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad56339a3ef1a547827ba58dc45856d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652804299
 GameObject:
   m_ObjectHideFlags: 0
