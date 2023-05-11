@@ -233,15 +233,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6362988736085163617, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6506207846609357808, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_text
-      value: "Move - WASD\nFire - Mouse1\nNext Weapon - E\nPrevious Weapon - Q\n\nFiring
-        on beat will increase the sound level of the weapon you are holding. The
-        sound level will increase the power of all of your weapons but beware! as
-        the enemies strength will also increase.\n\nWeapon:\tSound Buff\n\nRevolver\tDamage\nTrumpet\tSpeed\nHorn\t\tBullet
-        Size"
+      value: "   Controls:\nMove - WASD\nFire - Mouse1\nNext Weapon - E\nPrevious
+        Weapon - Q\n\nFiring on beat will increase the sound level of the weapon
+        you are holding. The sound level will increase the power of all of your weapons
+        but beware! as the enemies strength will also increase.\n\nWeapon:\tSound
+        Buff\n\nRevolver\tDamage\nTrumpet\tSpeed\nHorn\t\tBullet Size"
       objectReference: {fileID: 0}
     - target: {fileID: 9032526017850822398, guid: 75e0bc1d9eaab4c4dbdae83d0187ea4b, type: 3}
       propertyPath: m_IsActive
